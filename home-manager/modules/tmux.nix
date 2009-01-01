@@ -54,7 +54,7 @@
     [
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.yank # Copy to system clipboard
-      # tmuxPlugins.gruvbox # -- 
+      tmuxPlugins.gruvbox # -- 
       tmuxPlugins.better-mouse-mode # Mouse support
       tmuxPlugins.tmux-fzf
       tmuxPlugins.copycat

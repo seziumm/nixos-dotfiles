@@ -3,8 +3,8 @@
   stylix = {
     enable = true;
     polarity = "either";
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-   base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+   # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     # @TODO fix oh-my-posh theme not being automatic
     # @TODO fix tmux
 
@@ -32,6 +32,8 @@
     };
 
 
+# if you're changing a nerd font and some nerd font icons are not showing,
+# run this: fc-cache -r.
     fonts = {
       monospace = {
         # package = pkgs.cascadia-code;

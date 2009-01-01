@@ -4,7 +4,7 @@
     enable = true;
 
     settings = {
-      manager = {
+      mgr = {
         ratio = [1 2 3];
         sort_by = "natural";
         sort_sensitive = false;
