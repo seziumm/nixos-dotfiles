@@ -1,0 +1,10 @@
+{ pkgs, ...}:
+
+{
+  imports = [
+    ./desktop
+    ./shell
+  ];
+
+
+}
