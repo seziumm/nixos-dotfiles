@@ -1,5 +1,9 @@
 {
   imports = [
+
+    ./yazi.nix
+    # fix this
+
     ./kitty.nix
     ./bat.nix
     ./eza.nix
@@ -16,5 +20,6 @@
     ./wofi
     # ./zathura.nix
     ./zsh.nix
+    
   ];
 }

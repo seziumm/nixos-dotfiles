@@ -69,6 +69,7 @@
    cava
    gcc
    lazygit # git but for me
+   git
 
 
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
