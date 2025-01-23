@@ -1,10 +1,7 @@
-# ❄️ NixOS Config Reborn
+# ❄️ NixOS Config 
 
-Welcome to my redesigned NixOS configuration built for efficiency and aesthetics. Right now I'm trying to commit something everyday. Let's see how long I can go.
 
-![screenshot](./screenshots/screenshot1.png)
-
-You can still find my old configuration [here](https://github.com/Andrey0189/nixos-config)
+<!--![screenshot](./screenshots/screenshot1.png)-->
 
 ## ✨ Features
 
@@ -76,11 +73,11 @@ To get started with this setup, follow these steps:
     home-manager switch
     ```
 
-## 😎 Enjoy!
+<!--## 😎 Enjoy!-->
+<!---->
+<!--![screenshot](./screenshots/screenshot2.png)-->
 
-![screenshot](./screenshots/screenshot2.png)
-
-## 🤝 Contributions
-
-Feel free to fork the repository and submit pull requests if you'd like to contribute improvements. Open issues if you encounter any problems with the config or have ideas for new features.
-
+<!--## 🤝 Contributions-->
+<!---->
+<!--Feel free to fork the repository and submit pull requests if you'd like to contribute improvements. Open issues if you encounter any problems with the config or have ideas for new features.-->
+<!---->
