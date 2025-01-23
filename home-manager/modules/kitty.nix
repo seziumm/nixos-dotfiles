@@ -4,6 +4,7 @@ programs.kitty = {
   # themeFile = "gruvbox-material-dark-medium";
   themeFile = "gruvbox-dark";
   font.name = "JetBrainsMono Nerd Font";
+  shellIntegration.mode = "no-cursor";
 
   settings = {
     confirm_os_window_close = 0;
@@ -14,7 +15,7 @@ programs.kitty = {
 
     cursor_trail = "1";
     cursor_trail_decay = "0.1 0.4";
-    shell_integration = "no-cursor";
+
     cursor_shape = "block";
     cursor_blink_interval = "0.0";
 

@@ -49,6 +49,7 @@
     libnotify
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    hyprpaper
 
     # Other
     bemoji

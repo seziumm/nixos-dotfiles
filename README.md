@@ -69,6 +69,8 @@ To get started with this setup, follow these steps:
     cd nixos-config-reborn
     git add .
     nixos-rebuild switch --flake ./#<hostname>
+    example:
+    nixos-rebuild switch --flake ./#sezium
     # or nixos-install --flake ./#<hostname> if you are installing on a fresh system
     home-manager switch
     ```
