@@ -1,22 +1,12 @@
-{ config, pkgs, ... }: 
-
-
-{
-
+{ homeStateVersion, user, ... }: {
   imports = [
-    ./shared
+    ./modules
+    ./home-packages.nix
   ];
 
-
   home = {
-    username = "sezium";
-    homeDirectory = "/home/sezium";
-    stateVersion = "24.11";
-
+    username = user;
+    homeDirectory = "/home/${user}";
+    stateVersion = homeStateVersion;
   };
-  
-  
-
-
-
 }
