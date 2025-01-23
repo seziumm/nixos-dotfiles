@@ -66,6 +66,8 @@
    waybar
 
    cava
+   gcc
+   lazygit # git but for me
 
 
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
