@@ -61,6 +61,7 @@
    kitty
    brave
    wl-gammactl
+   vim
 
    grim
    slurp
@@ -70,6 +71,8 @@
    gcc
    lazygit # git but for me
    git
+   zathura
+
 
 
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })

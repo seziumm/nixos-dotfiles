@@ -37,6 +37,7 @@
     initExtra = ''
 
 
+# version 1.0.0
 # Start Tmux automatically if not already running. No Tmux in TTY
       if [ -z "$TMUX" ] && [ -n "$DISPLAY" ]; then
         tmux attach-session -t default || tmux new-session -s default
@@ -45,7 +46,6 @@
 
 # enable vi mode 
           bindkey -v
-
 
 # Bind Ctrl + P to previous history search
           bindkey '^P' history-search-backward
@@ -69,16 +69,17 @@
 ########################################### 
 
 # Unbind Ctrl+Shift+H (backward-delete-char)
-          bindkey -r '\e[1;6H'
+
+          # bindkey -r '\e[1;6H'
 
 # Unbind Ctrl+Shift+L (clear-screen)
-          bindkey -r '\e[1;6L'
+          # bindkey -r '\e[1;6L'
 
 # Unbind Ctrl+Shift+J (down-arrow search or custom binding)
-          bindkey -r '\e[1;6J'
+          # bindkey -r '\e[1;6J'
 
 # Unbind Ctrl+Shift+L (again)
-          bindkey -r '\e[1;6L'
+          # bindkey -r '\e[1;6L'
 
           '';
   };

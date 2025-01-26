@@ -1,20 +1,4 @@
 { pkgs, lib, ... }:
-
-let
-  # fine-cmdline = pkgs.vimUtils.buildVimPlugin {
-  #   name = "fine-cmdline";
-  #   src = pkgs.fetchFromGitHub {
-  #     owner = "VonHeikemen";
-  #     repo = "fine-cmdline.nvim";
-  #     # git ls-remote https://github.com/VonHeikemen/fine-cmdline.nvim.git main
-  #     rev = "dd676584145d62b30d7e8dbdd011796a8f0a065f";
-  #     # Use this to get sha256
-  #     # sha256 = pkgs.lib.fakeSha256;
-  #     sha256 = "w9wwjClkOWk3wCgEiZIFLZRJ/gAfX38x2LnVRaelKD8=";
-  #   };
-  # };
-
-in
 {
   programs.neovim = {
 
