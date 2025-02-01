@@ -9,8 +9,14 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
 
-    stylix.url = "github:danth/stylix";
+    };
+
+    # stylix.url = "github:danth/stylix";
 
     # COMING SOON...
     #nixvim = {
@@ -19,15 +25,17 @@
     #};
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  # added nixvim in inputs and outputs
+  outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs: let
     system = "x86_64-linux";
     homeStateVersion = "24.11"; # 25.05
 
     user = "sezium";
-
+    # user = "lezium";
 
     hosts = [
-      { hostname = "TeoOS"; stateVersion = "24.11"; }
+      { hostname =  "laptop";  stateVersion = "24.11"; }
+      # { hostname = "desktop";  stateVersion = "24.11"; }
     ];
 
     makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
@@ -57,7 +65,14 @@
 
       modules = [
         ./home-manager/home.nix
+
+
+        # pass the nixvim module to home-manager:
+        nixvim.homeManagerModules.nixvim
       ];
     };
+
+
+
   };
 }

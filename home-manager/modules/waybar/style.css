@@ -51,6 +51,8 @@ window#waybar {
 }
 
 #battery.charging {
+   color: white;
+   background-color: #00CC00;
 }
 
 @keyframes blink {
@@ -62,6 +64,16 @@ window#waybar {
 
 #battery.warning:not(.charging) {
     color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    color: white;
+    background-color: red;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;

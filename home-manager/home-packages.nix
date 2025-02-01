@@ -4,45 +4,33 @@
   home.packages = with pkgs; [
     # Packages in each category are sorted alphabetically
 
-    # Desktop apps
     imv
     mpv
-    obs-studio obsidian
-    teams-for-linux
-    telegram-desktop
-    vesktop
+
+    # Desktop apps
+    # obs-studio 
+    # obsidian
+    # teams-for-linux
+    # telegram-desktop
+    # vesktop
 
     # CLI utils
-    bc
-    bottom
     brightnessctl
-    cliphist
-    ffmpeg
-    ffmpegthumbnailer
-    fzf
+    # cliphist
+    # ffmpeg
     git-graph
-    grimblast
-    htop
-    ntfs3g
-    mediainfo
-    microfetch
-    playerctl
+
     ripgrep
-    showmethekey
-    silicon
-    udisks
-    ueberzugpp
     unzip
-    w3m
+
     wget
     wl-clipboard
     wtype
-    yt-dlp
     zip
 
     # Coding stuff
-    nodejs
-    python311
+    # nodejs
+    # python311
 
     # WM stuff
     libsForQt5.xwaylandvideobridge
@@ -52,16 +40,19 @@
     hyprpaper
 
     # Other
-    bemoji
-    nix-prefetch-scripts
+    # bemoji
+    # nix-prefetch-scripts
 
 
 
    # sezium stuff
+   gh
+   fzf
    kitty
    brave
    wl-gammactl
-   vim
+   vim-full
+   fastfetch
 
    grim
    slurp
@@ -69,13 +60,14 @@
 
    cava
    gcc
-   lazygit # git but for me
    git
    zathura
+   # neovim
 
+   # lua-language-server # needed in nvimchad
+   # clang-tools         # still needed in nvimchad (lsp)
 
-
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+   (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
   fonts.fontconfig.enable = true;

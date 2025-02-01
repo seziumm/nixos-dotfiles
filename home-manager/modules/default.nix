@@ -1,16 +1,17 @@
 {
   imports = [
+    ./nixvim
 
     ./yazi.nix
+    ./mime.nix
     # fix this
 
     ./kitty.nix
     ./bat.nix
     ./eza.nix
-    # ./git.nix
+    ./git.nix
     ./hyprland
-    # ./lazygit.nix
-    ./neovim.nix
+    # ./neovim.nix
     # ./obsidian.nix
     # ./ranger.nix
     # ./starship.nix
@@ -18,8 +19,11 @@
     ./tmux.nix
     ./waybar
     ./wofi
-    # ./zathura.nix
+    ./zathura.nix
     ./zsh.nix
+
+    ./cursor.nix
+    ./vim
     
   ];
 }

@@ -30,7 +30,6 @@
 	"hyprpaper"
 	"wl-gammactl -c 1.0 -b 1.0 -g 0.775"
 
-
     "[workspace 1 silent] $browser"
     "[workspace 2 silent] $terminal"
       ];

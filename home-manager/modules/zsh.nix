@@ -21,8 +21,9 @@
       upd = "nh os switch --update";
       hms = "nh home switch";
 
-      yz = "yz";
+      yz = "yazi";
       vi = "nvim";
+      vif = "nvim $(fzf)";
       se = "sudoedit";
 
 
@@ -31,6 +32,7 @@
 
       cp = "cp -v";
       rm = "rm -v";
+
     };
 
 
@@ -58,7 +60,7 @@
 
 # autocomplete with shift + tab
           bindkey '^[[Z' vi-forward-char
-
+ # move it into tmux
 
 
 
