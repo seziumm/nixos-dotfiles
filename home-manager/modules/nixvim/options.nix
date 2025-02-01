@@ -1,7 +1,8 @@
 { lib, pkgs, ... }:
 {
   programs.nixvim.config.opts = {
-    updatetime = 100; # Faster completion
+    updatetime = 100; 
+# Faster completion
 
     number = true;
     relativenumber = true;
@@ -24,6 +25,21 @@
     swapfile = false;
     undofile = true; # Build-in persistent undo
 
-    # termguicolors = lib.mkForce pkgs.stdenv.isLinux;
+# termguicolors = lib.mkForce pkgs.stdenv.isLinux;
+      keymaps = [
+        {
+          key = ";";
+          action = ":";
+        }
+
+        {
+          mode = "n";
+          key = "<leader>m";
+          options.silent = true;
+          action = "<cmd>!make<CR>";
+        }
+
+      ];
+
   };
 } 
