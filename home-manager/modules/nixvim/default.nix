@@ -1,18 +1,25 @@
-{
-  imports = [
-    ./options.nix
-  ];
+# see https://github.com/nix-community/nixvim
+{ pkgs, ... }: 
 
+{
   programs.nixvim = {
     enable = true;
 
-    colorschemes.gruvbox.enable = true;
-    plugins.lualine.enable = true;
-    plugins.nvim-tree.enable = true;
-    plugins.web-devicons.enable = true;
+    imports = [
+      ./options.nix
+      ./plugins.nix
+      ./keymaps.nix
+    ];
 
-      globals.mapleader = " ";
-      # then keymaps
+    # extraPlugins = builtins.attrValues {
+    #   inherit (pkgs.vimPlugins)
+    #     friendly-snippets; # Snippets for luasnip
+    # };
+    colorschemes.gruvbox.enable = true;
+
+    globals.mapleader = " ";
+
+
   };
 
 }

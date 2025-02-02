@@ -21,6 +21,7 @@
     ./wofi
     ./zathura.nix
     ./zsh.nix
+    ./zoxide.nix
 
     ./cursor.nix
     ./vim

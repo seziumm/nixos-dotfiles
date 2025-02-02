@@ -21,12 +21,13 @@
     git-graph
 
     ripgrep
+
     unzip
+    zip
 
     wget
     wl-clipboard
-    wtype
-    zip
+    # wtype
 
     # Coding stuff
     # nodejs
@@ -48,18 +49,24 @@
    # sezium stuff
    gh
    fzf
+   fd # finder
    kitty
    brave
    wl-gammactl
    vim-full
    fastfetch
+   zoxide # better cd
 
    grim
    slurp
    waybar
 
    cava
+
+# @TODO: remove these packages
    gcc
+   bear
+
    git
    zathura
    # neovim

@@ -21,14 +21,14 @@ To get started with this setup, follow these steps:
 
 	```bash
     git clone https://github.com/sezium/nixos-dotfiles
-    cd nixos-config-reborn
+    cd nixos-dotfiles
     ```
 
 3. **Copy one of the hosts configuration to set up your own**:
 
     ```bash
     cd hosts
-    cp -r slim3 <your_hostname>
+    cp -r laptop <your_hostname>
     cd <your_hostname>
     ```
 
