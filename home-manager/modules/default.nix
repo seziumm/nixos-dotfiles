@@ -3,7 +3,7 @@
     ./nixvim
 
     ./yazi.nix
-    ./mime.nix
+    # ./mime.nix
     # fix this
 
     ./kitty.nix

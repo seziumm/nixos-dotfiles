@@ -1,6 +1,4 @@
 # see https://github.com/nix-community/nixvim
-{ pkgs, ... }: 
-
 {
   programs.nixvim = {
     enable = true;
