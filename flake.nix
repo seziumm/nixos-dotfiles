@@ -15,18 +15,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
 
     };
-
-    # stylix.url = "github:danth/stylix";
-
-    # COMING SOON...
-    #nixvim = {
-    #  url = "github:nix-community/nixvim";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
   };
 
   # added nixvim in inputs and outputs
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs: let
+  outputs = { nixpkgs, home-manager, nixvim, ... }@inputs: let
     system = "x86_64-linux";
     homeStateVersion = "24.11"; # 25.05
 

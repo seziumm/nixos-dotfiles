@@ -5,6 +5,7 @@
 
     number = true;
     relativenumber = true;
+    
 
     splitbelow = true;
     splitright = true;
@@ -13,6 +14,8 @@
     autoindent = true;
     smartindent = true;
     expandtab = true;
+
+    softtabstop = 2;
     shiftwidth = 2;
     tabstop = 2;
 

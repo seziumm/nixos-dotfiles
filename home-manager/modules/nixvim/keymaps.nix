@@ -19,6 +19,16 @@
 
 
     # TELESCOPE
+    {
+      mode ="n";
+      key = "<leader>td";
+      action = "<cmd>Telescope lsp_definitions<CR>";
+
+      options.desc = "Open Telescope Lsp Definitions";
+      options.silent = true;
+
+    }
+
 
     {
       mode ="n";

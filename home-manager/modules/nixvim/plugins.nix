@@ -1,57 +1,67 @@
 {
 
-
   plugins = {
+# parentheses indend lines
+    indent-blankline = {
+      enable = true;
 
-luasnip = {
-        enable = true;
-        fromVscode = [
-          {}
-        ];
-      };
-      friendly-snippets.enable = true;
+      settings.exclude.buftypes = [
+        "terminal" 
+        # "nofile"
+        # "quickfix"
+        # "prompt"
+      ];
+    };
+    luasnip = {
+      enable = true;
+      fromVscode = [
+      {}
+      ];
+    };
+    friendly-snippets.enable = true;
 
     tmux-navigator.enable = true;
 
     telescope.enable = true;
-    
 
     web-devicons.enable = true;
-    nvim-tree = {
-        enable = true;
-        autoReloadOnWrite = true;
-        view = {
-          number = true;
-          relativenumber = true;
-          side = "left";
-          preserveWindowProportions = true;  # o false
 
-        };
+    nvim-tree = {
+      enable = true;
+      autoReloadOnWrite = true;
+      view = {
+        number = true;
+        relativenumber = true;
+        side = "left";
+        preserveWindowProportions = true;  # o false
+
+      };
+      renderer.indentMarkers.enable = true; # render | in nvim tree like indent-blankline
     };
 
-    # syntax and look
+# syntax and look
 
     treesitter = {
-      # already all installed. If not, run: TSInstall all
+# already all installed. If not, run: TSInstall all
       enable = true;
     };
 
 
 
-    # autocomplition
+# autocomplition
     cmp = {
       enable = true;
       autoEnableSources = false;
       settings.sources = [
-        { name = "nvim_lsp"; }
-        { name = "path"; }
-        { name = "buffer"; }
-        { name = "luasnip";}
+      { name = "nvim_lsp"; }
+      { name = "path"; }
+      { name = "buffer"; }
+      { name = "luasnip";}
       ];
 
 
       settings.mapping =  {
-          # "<CR>" = "cmp.mapping.confirm({ select = true })";
+# "<CR>" = "cmp.mapping.confirm({ select = true })";
         "<CR>" =
           ''
           cmp.mapping.confirm({
@@ -62,33 +72,33 @@ luasnip = {
 
         "<Tab>" =
           ''
-            function(fallback)
-            local luasnip = require('luasnip')
-            if cmp.visible() then
-              cmp.select_next_item()
-            elseif luasnip.expandable() then
+          function(fallback)
+          local luasnip = require('luasnip')
+          if cmp.visible() then
+            cmp.select_next_item()
+              elseif luasnip.expandable() then
               luasnip.expand()
-            elseif luasnip.expand_or_jumpable() then
+              elseif luasnip.expand_or_jumpable() then
               luasnip.expand_or_jump()
-            else
-              fallback()
+          else
+            fallback()
               end
-            end
-            '';
-         
-          "<S-Tab>" =
-            ''
-            function(fallback)
-            if cmp.visible() then
-              cmp.select_prev_item()
-            else
-              fallback()
               end
-            end
-                '';
+              '';
 
-          modes = "i, s";
-        };
+        "<S-Tab>" =
+          ''
+          function(fallback)
+          if cmp.visible() then
+            cmp.select_prev_item()
+          else
+            fallback()
+              end
+              end
+              '';
+
+        modes = "i, s";
+      };
     };
     cmp-nvim-lsp.enable = true;
     cmp-path.enable = true;
@@ -108,14 +118,14 @@ luasnip = {
 
 
 
-        # web
+# web
         cssls.enable = true;
         html.enable = true;
         jsonls.enable = true;
 
 
-        
-        # other
+
+# other
 
         java_language_server.enable = true;
         pylsp.enable = true;
@@ -124,7 +134,7 @@ luasnip = {
         rust_analyzer.enable = true;
         rust_analyzer.installCargo = true;
         rust_analyzer.installRustc = true;
-        
+
 
       };
 

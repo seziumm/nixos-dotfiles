@@ -22,7 +22,6 @@
       hms = "nh home switch";
 
       yz = "yazi";
-      vi = "nvim";
       vif = "nvim $(fzf)";
       se = "sudoedit";
 

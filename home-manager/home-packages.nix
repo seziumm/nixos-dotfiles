@@ -57,9 +57,11 @@
    fastfetch
    zoxide # better cd
 
+
    grim
    slurp
    waybar
+   pywal # dynamic color palette wallpaper
 
    cava
 

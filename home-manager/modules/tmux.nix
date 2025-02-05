@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.tmux = {
     enable = true;
     baseIndex = 1;
@@ -6,8 +7,9 @@
     escapeTime = 0;
 
     keyMode = "vi";
-    terminal = "screen-256color";
+    terminal = "xterm-256color";
     extraConfig = ''
+
       # required by yazi to work properly
       set -g allow-passthrough on
       set -ga update-environment TERM
@@ -26,20 +28,14 @@
       bind -n M-n select-window -t 6
       bind -n M-m select-window -t 7
 
-      bind -n M-Left  select-pane -L
-      bind -n M-Right select-pane -R
-      bind -n M-Up    select-pane -U
-      bind -n M-Down  select-pane -D
+      bind -n M-h resize-pane -L 5
+      bind -n M-l resize-pane -R 5
+      bind -n M-k resize-pane -U 3
+      bind -n M-j resize-pane -D 3
 
-      bind -n M-S-Left  resize-pane -L 5
-      bind -n M-S-Right resize-pane -R 5
-      bind -n M-S-Up    resize-pane -U 3
-      bind -n M-S-Down  resize-pane -D 3
+      bind -n M-H split-window -v -c "#{pane_current_path}"
+      bind -n M-V split-window -h -c "#{pane_current_path}"
 
-      bind -n M-o split-window -v
-      bind -n M-y split-window -h
-
-      bind -n M-Enter new-window
       bind -n M-t new-window
 
       bind-key -T copy-mode-vi 'v' send -X begin-selection
@@ -49,23 +45,19 @@
       bind -n M-Q kill-window
       bind -n M-s kill-session
 
-      # Bind Ctrl+Backspace to delete a word backward (zsh)
-      # TODO fix it with kitty.
-      # kitty should send a recognizable key sequence, but it isn't.
+# Bind Ctrl+Backspace to delete a word backward (zsh)
+# TODO fix it with kitty.
+# kitty should send a recognizable key sequence, but it isn't.
 
-      bind-key -n C-BSpace send-keys C-w
 
       '';
 
     plugins = with pkgs;
     [
-    # {
-    #   plugin = tmuxPlugins.gruvbox;
-    # }
-    tmuxPlugins.gruvbox
-    tmuxPlugins.vim-tmux-navigator
-    tmuxPlugins.yank # Copy to system clipboard
-    tmuxPlugins.better-mouse-mode # Mouse support
+      tmuxPlugins.gruvbox
+      tmuxPlugins.vim-tmux-navigator
+      tmuxPlugins.yank # Copy to system clipboard
+      tmuxPlugins.better-mouse-mode # Mouse support
     ];
   };
-               }
+}
