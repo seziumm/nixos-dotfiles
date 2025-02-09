@@ -2,6 +2,10 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    ly # display manager
+
+  
+
     # Packages in each category are sorted alphabetically
 
     imv

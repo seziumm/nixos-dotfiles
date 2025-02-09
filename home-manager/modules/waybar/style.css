@@ -1,3 +1,4 @@
+/* see: https://github.com/elifouts/Dotfiles.git */
 @import url('../../.cache/wal/colors-waybar.css');
 
 * {
@@ -46,47 +47,46 @@ tooltip {
   color:@color7;
   transition: all .3s ease;
 }
-#custom-pacman{
-  padding: 0px 5px;
-  transition: all .3s ease;
-  color:@color7;
-
-}
 #workspaces {
   padding: 0px 5px;
 }
 #workspaces button {
-  all:unset;
+  all: unset;
   padding: 0px 5px;
-  color: alpha(@color9,.4);
-  transition: all .2s ease;
+  color: rgba(200, 200, 200, 1); /* Bianco più scuro */
+  transition: all 0.2s ease;
 }
+
 #workspaces button:hover {
-  color:rgba(0,0,0,0);
+  color: rgba(220, 220, 220, 1); /* Un po' più chiaro al passaggio */
   border: none;
-  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+  text-shadow: 0px 0px 1.5px rgba(255, 255, 255, 0.5);
   transition: all 1s ease;
 }
+
 #workspaces button.active {
-  color: @color9;
+  color: rgba(255, 255, 255, 1); /* Bianco puro */
   border: none;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.7);
 }
+
 #workspaces button.empty {
-  color: rgba(0,0,0,0);
+  color: rgba(180, 180, 180, 1); /* Ancora più scuro */
   border: none;
-  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+  text-shadow: 0px 0px 1.5px rgba(255, 255, 255, 0.2);
 }
+
 #workspaces button.empty:hover {
-  color: rgba(0,0,0,0);
+  color: rgba(200, 200, 200, 1);
   border: none;
-  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+  text-shadow: 0px 0px 1.5px rgba(255, 255, 255, 0.5);
   transition: all 1s ease;
 }
+
 #workspaces button.empty.active {
-  color: @color9;
+  color: rgba(255, 255, 255, 1); /* Bianco puro */
   border: none;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.7);
 }
 #bluetooth{
   padding: 0px 5px;
