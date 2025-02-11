@@ -5,7 +5,6 @@
     ./oh-my-posh.nix
 
     ./yazi.nix
-    # ./mime.nix
     # fix this
 
     ./kitty.nix
