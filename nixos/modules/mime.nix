@@ -4,10 +4,10 @@
     enable = true;
     
     defaultApplications = {
-      "image/png" = "imv.desktop";
-      "image/jpeg" = "imv.desktop";
-      "image/gif" = "imv.desktop";
-      "image/svg+xml" = "imv.desktop";
+      "image/png" = "mpv.desktop";
+      "image/jpeg" = "mpv.desktop";
+      "image/gif" = "mpv.desktop";
+      "image/svg+xml" = "mpv.desktop";
       "video/mp4" = "mpv.desktop";
       "video/x-matroska" = "mpv.desktop";
       "audio/mpeg" = "mpv.desktop";

@@ -26,10 +26,10 @@
         sixel_friction = 15;
       };
   opener.rules = [
-        # IMV for images (explicit path)
+        # MPV for images (explicit path)
         {
           mime = "image/*";
-          run = "${pkgs.imv}/bin/imv $FILE";
+          run = "${pkgs.mpv}/bin/mpv --player-operation-mode=pseudo-gui $FILE";
           orphan = true;
           block = true;
         }
