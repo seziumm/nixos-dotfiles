@@ -2,14 +2,15 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    ly # display manager
-
-  
 
     # Packages in each category are sorted alphabetically
 
-    imv
+    # imv
     mpv
+
+
+    oh-my-posh # set terminal theme
+
 
     # Desktop apps
     # obs-studio 

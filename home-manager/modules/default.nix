@@ -1,6 +1,8 @@
 {
   imports = [
     ./nixvim
+    ./mpv.nix
+    ./oh-my-posh.nix
 
     ./yazi.nix
     # ./mime.nix

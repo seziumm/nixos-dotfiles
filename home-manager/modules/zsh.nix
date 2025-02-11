@@ -1,4 +1,8 @@
 {
+
+
+
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -10,10 +14,10 @@
     history.size = 1000;
     history.path = "$HOME/.zshhistory";
 
-    oh-my-zsh = {
-      enable = true;
-      theme = "agnoster";
-    };
+    # oh-my-zsh = {
+    #   enable = true;
+    #   theme = "agnoster";
+    # };
 
     shellAliases = {
       sw = "nh os switch";
@@ -21,7 +25,7 @@
       hms = "nh home switch";
 
       yz = "yazi";
-      vif = "nvim $(fzf)";
+      vif = "~/scripts/vif.sh";
       se = "sudoedit";
 
 

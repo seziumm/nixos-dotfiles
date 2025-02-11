@@ -15,7 +15,46 @@
 
       "application/pdf" = "org.pwmt.zathura.desktop";
 
-      "inode/directory" = "yazi";
+      "inode/directory" = "yazi.desktop";
     };
   };
 }
+
+
+# See if this works
+
+
+
+#
+# {
+#   xdg = {
+#     enable = true;
+#     mime.enable = true;
+#     
+#     desktopEntries = {
+#       yazi = {
+#         name = "Yazi";
+#         genericName = "File Manager";
+#         comment = "Terminal File Manager";
+#         exec = "kitty -e yazi %u";  # Usa Kitty per aprire Yazi 
+#         terminal = false;           # Cambiato a false perché specifichiamo già il terminale
+#         categories = [ "System" "FileTools" "FileManager" ];
+#         mimeType = [ "inode/directory" ];
+#         type = "Application";
+#       };
+#     };
+#     
+#     mimeApps = {
+#       enable = true;
+#       defaultApplications = {
+#         "inode/directory" = [ "yazi.desktop" ];
+#       };
+#     };
+#   };
+#
+#   # Assicurati che sia Kitty che Yazi siano installati
+#   home.packages = with pkgs; [
+#     kitty
+#     yazi
+#   ];
+# }
