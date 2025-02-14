@@ -1,6 +1,5 @@
 {
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.configurationLimit = 10;
-
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/nvme0n1p1";  # Sostituisci con il tuo disco principale
+  boot.loader.grub.configurationLimit = 5; # Numero massimo di installazioni da mantenere
 }

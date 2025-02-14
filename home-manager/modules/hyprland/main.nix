@@ -78,7 +78,6 @@
         repeat_rate = 30;
         accel_profile = "flat";
 
-
         scroll_factor = 1.5; # all input default scroll_factor, for example mouse
 
         touchpad = {
@@ -89,10 +88,17 @@
 
 
       };
-      device = {
+      device = [
+      {
         name="razer-razer-deathadder-essential";
         sensitivity=-0.4;
-      };
+      }
+# idk why but when I unplug the mouse hyprland makes another device
+      {
+        name="razer-razer-deathadder-essential-1";
+        sensitivity=-0.4;
+      }
+      ];
 
 
       gestures = {
