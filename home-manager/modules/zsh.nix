@@ -12,7 +12,7 @@
     syntaxHighlighting.enable = true;
 
     history.size = 1000;
-    history.path = "$HOME/.zshhistory";
+    history.path = "~/.zshhistory";
 
     # oh-my-zsh = {
     #   enable = true;
@@ -30,6 +30,8 @@
 
 
       ".." = "cd ..";
+      "..." = "cd ../..";
+      "...." = "cd ../../..";
 
 
       cp = "cp -v";

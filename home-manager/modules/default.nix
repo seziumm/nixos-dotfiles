@@ -3,6 +3,7 @@
     ./nixvim
     ./mpv.nix
     ./oh-my-posh.nix
+    ./directories.nix
 
     ./yazi.nix
     # fix this

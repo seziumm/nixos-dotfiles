@@ -25,41 +25,41 @@
         image_quality = 75;
         sixel_friction = 15;
       };
-  opener.rules = [
-        # MPV for images (explicit path)
-        {
-          mime = "image/*";
-          run = "${pkgs.mpv}/bin/mpv --player-operation-mode=pseudo-gui $FILE";
-          orphan = true;
-          block = true;
-        }
+      opener.rules = [
+# MPV for images (explicit path)
+      {
+        mime = "image/*";
+        run = "${pkgs.mpv}/bin/mpv --player-operation-mode=pseudo-gui $FILE";
+        orphan = true;
+        block = true;
+      }
 
-        # MPV for video/audio
-        {
-          mime = "video/*";
-          run = "${pkgs.mpv}/bin/mpv --player-operation-mode=pseudo-gui $FILE";
-          orphan = true;
-          block = true;
-        }
-        {
-          mime = "audio/*";
-          run = "${pkgs.mpv}/bin/mpv --player-operation-mode=pseudo-gui $FILE";
-          orphan = true;
-          block = true;
-        }
+# MPV for video/audio
+      {
+        mime = "video/*";
+        run = "${pkgs.mpv}/bin/mpv --player-operation-mode=pseudo-gui $FILE";
+        orphan = true;
+        block = true;
+      }
+      {
+        mime = "audio/*";
+        run = "${pkgs.mpv}/bin/mpv --player-operation-mode=pseudo-gui $FILE";
+        orphan = true;
+        block = true;
+      }
 
-        # Zathura for PDFs (with DBUS fix)
- {
+# Zathura for PDFs (with DBUS fix)
+      {
         mime = "application/pdf";
         run = "${pkgs.zathura}/bin/zathura \"$FILE\"";
         block = true;
         orphan = true;
       }
 
-        # Fallback
-        # {
-        #   run = "${pkgs.xdg-utils}/bin/xdg-open $FILE";
-        # }
+# Fallback
+# {
+#   run = "${pkgs.xdg-utils}/bin/xdg-open $FILE";
+# }
       ];
 
 # Theme configuration from theme.toml
