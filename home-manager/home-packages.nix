@@ -9,26 +9,15 @@
     mpv
 
 
-    oh-my-posh # set terminal theme
-
-
-    # Desktop apps
-    # obs-studio 
-    # obsidian
-    # teams-for-linux
-    # telegram-desktop
-    # vesktop
 
     # CLI utils
     brightnessctl
-    # cliphist
-    # ffmpeg
-    git-graph
 
     ripgrep
 
     unzip
     zip
+
 
     wget
     wl-clipboard
@@ -53,9 +42,11 @@
 
    # sezium stuff
    gh
+   git
    fzf
    fd # finder
    kitty
+   oh-my-posh # set terminal theme
    brave
    wl-gammactl
    vim-full
@@ -66,7 +57,6 @@
    grim
    slurp
    waybar
-   pywal # dynamic color palette wallpaper
 
    cava
 
@@ -74,13 +64,7 @@
    gcc
    bear
 
-   git
    zathura
-   # neovim
-
-   # lua-language-server # needed in nvimchad
-   # clang-tools         # still needed in nvimchad (lsp)
-
    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
