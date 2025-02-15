@@ -14,11 +14,6 @@
     history.size = 1000;
     history.path = "$HOME/.zshhistory";
 
-    # oh-my-zsh = {
-    #   enable = true;
-    #   theme = "agnoster";
-    # };
-
     shellAliases = {
       sw = "nh os switch";
       upd = "nh os switch --update";
