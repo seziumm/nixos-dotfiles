@@ -3,6 +3,7 @@
 {
   imports = [
     ./boot.nix
+    ./nvidia.nix
     ./hardware-configuration.nix
     ./local-packages.nix
     ../../nixos/modules
