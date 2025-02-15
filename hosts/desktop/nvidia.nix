@@ -1,5 +1,8 @@
 { config, ... }:
+
 {
+
+  nixpkgs.config.allowUnfree = true;
 
 
 # Enable OpenGL
