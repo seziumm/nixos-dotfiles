@@ -42,11 +42,7 @@
 				"$mainMod Alt, j, resizeactive,   0  40"
 				"$mainMod Alt, k, resizeactive,   0 -40"
 
-				"$mainMod, H, exec,hyprctl keyword general:layout dwindle # vertical layout"
-				"$mainMod, V, exec,hyprctl keyword general:layout master # horizzontal"
-
-
-				"$mainMod, S, exec, grim -g \"$(slurp -w 0)\" ~/Pictures/Screenshot/$(date +'%s')_grim.png"
+				"$mainMod, S, exec, grim -g \"$(slurp -w 0)\" ~/Media/Pictures/screenshots/$(date +'%s')_grim.png"
 
 				"$mainMod, mouse_down, workspace, e+1"
 				"$mainMod, mouse_up, workspace, e-1"

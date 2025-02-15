@@ -29,18 +29,18 @@
     
   };
   
-  # Configurazione XDG directories
-  xdg.userDirs = {
-    enable = true;
-    createDirectories = true;
-    documents = "${config.home.homeDirectory}/Documents";
-    download = "${config.home.homeDirectory}/Downloads";
-    videos = "${config.home.homeDirectory}/Media/Videos";
-    music = "${config.home.homeDirectory}/Media/Music";
-    pictures = "${config.home.homeDirectory}/Media/Pictures";
-    desktop = "${config.home.homeDirectory}/Desktop";
-
-    publicShare = ""; # @TODO fix this 
-    templates = "";
-  };
+  # # Configurazione XDG directories
+  # xdg.userDirs = {
+  #   enable = true;
+  #   createDirectories = true;
+  #   documents = "${config.home.homeDirectory}/Documents";
+  #   download = "${config.home.homeDirectory}/Downloads";
+  #   videos = "${config.home.homeDirectory}/Media/Videos";
+  #   music = "${config.home.homeDirectory}/Media/Music";
+  #   pictures = "${config.home.homeDirectory}/Media/Pictures";
+  #   desktop = "${config.home.homeDirectory}/Desktop";
+  #
+  #   publicShare = ""; # @TODO fix this 
+  #   templates = "";
+  # };
 }

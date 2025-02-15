@@ -5,8 +5,8 @@
     settings = {
       ipc = "on";
 
-      preload =    "~/Pictures/Wallpapers/flower.png";
-      wallpaper = ",~/Pictures/Wallpapers/flower.png";
+      preload =    "~/Media/Pictures/wallpapers/flower.png";
+      wallpaper = ",~/Media/Pictures/wallpapers/flower.png";
       
     };
 

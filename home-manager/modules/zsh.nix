@@ -12,7 +12,7 @@
     syntaxHighlighting.enable = true;
 
     history.size = 1000;
-    history.path = "~/.zshhistory";
+    history.path = "$HOME/.zshhistory";
 
     # oh-my-zsh = {
     #   enable = true;
