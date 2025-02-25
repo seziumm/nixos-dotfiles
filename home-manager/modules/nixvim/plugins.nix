@@ -7,9 +7,9 @@
 
       settings.exclude.buftypes = [
         "terminal" 
-        # "nofile"
-        # "quickfix"
-        # "prompt"
+# "nofile"
+# "quickfix"
+# "prompt"
       ];
     };
     luasnip = {
@@ -111,7 +111,6 @@
       servers = {
         clangd.enable = true;
         cmake.enable = true;
-        glslls.enable = true;
 
         nixd.enable = true;
         bashls.enable = true;

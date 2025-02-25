@@ -31,7 +31,7 @@
       exec-once = [
         "hyprpaper"
         "waybar"
-        "wl-gammactl -c 1.0 -b 1.0 -g 0.775"
+        # "wl-gammactl -c 1.0 -b 1.0 -g 0.775"
 
         "[workspace 1 silent] $browser"
         "[workspace 2 silent] $terminal"
@@ -68,7 +68,7 @@
       };
 
       animations = {
-        enabled = true;
+        enabled = false;
       };
 
       input = {
@@ -91,7 +91,7 @@
       device = [
       {
         name="razer-razer-deathadder-essential";
-        sensitivity=-0.4;
+        sensitivity=-0.6;
       }
 # idk why but when I unplug the mouse hyprland makes another device
       {
@@ -99,7 +99,6 @@
         sensitivity=-0.4;
       }
       ];
-
 
       gestures = {
         workspace_swipe = true;

@@ -182,12 +182,10 @@
     };
 
 
-# # Keybindings
-# keybindings = {
-#   "!" = {
-#     command = "shell";
-#     args = [ "exit" ];
-#   };
-# };
+    keymap = {
+      "!" = {
+        exec = "quit";
+      };
+    };
   };
 }

@@ -2,12 +2,10 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-
     # Packages in each category are sorted alphabetically
 
     # imv
     mpv
-
 
 
     # CLI utils

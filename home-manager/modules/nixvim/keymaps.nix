@@ -70,5 +70,44 @@
 
     }
 
+
+
+
   ];
+
+   extraConfigVim = ''
+      " Competitive Programming keybindings
+      function! SetupCompetitiveProgramming()
+        " Debug build with input from file
+        nnoremap <F6> :w <bar> :vsplit<CR>:terminal g++ -D MYDEBUG -std=c++17 -fsanitize=address -g -Og -Wall -Wextra %:t -o %:r && ./%:r < input.txt<CR>
+        
+        " Debug build with manual input
+        nnoremap <F7> :w <bar> :vsplit<CR>:terminal g++ -D MYDEBUG -std=c++17 -fsanitize=address -g -Og -Wall -Wextra %:t -o %:r && ./%:r<CR>
+        
+        " Release build with input from file
+        nnoremap <F8> :w <bar> :vsplit<CR>:terminal g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r < input.txt<CR>
+        
+        " Release build with manual input
+        nnoremap <F9> :w <bar> :vsplit<CR>:terminal g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r<CR>
+        
+        " Release build with input/output files
+        nnoremap <F10> :w <bar> :vsplit<CR>:terminal g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r < input.txt > output.txt<CR>
+        
+        echo "Competitive Programming mode enabled!"
+      endfunction
+
+      " Map leader+cp to enable competitive programming mode
+      nnoremap <leader>cp :call SetupCompetitiveProgramming()<CR>
+
+      " Terminal settings
+      autocmd TermOpen * startinsert
+      
+      " Terminal mappings
+      tnoremap <Esc> <C-\><C-n>
+      tnoremap <C-w>h <C-\><C-n><C-w>h
+      tnoremap <C-w>j <C-\><C-n><C-w>j
+      tnoremap <C-w>k <C-\><C-n><C-w>k
+      tnoremap <C-w>l <C-\><C-n><C-w>l
+    '';
+
 }

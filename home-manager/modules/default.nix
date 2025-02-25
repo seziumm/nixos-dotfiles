@@ -6,7 +6,6 @@
     ./directories.nix
 
     ./yazi.nix
-    ./ssh.nix
     # fix this
 
     ./kitty.nix

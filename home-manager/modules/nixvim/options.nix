@@ -6,6 +6,8 @@
     number = true;
     relativenumber = true;
     
+    wrap = false;
+    
 
     splitbelow = true;
     splitright = true;

@@ -34,12 +34,12 @@ nnoremap <S-Tab> :tabnext<CR>
 
 inoremap {<CR> {<CR>}<Esc>O
 
-autocmd FileType cpp noremap <F6>  :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -fsanitize=address -g -Og -Wall -Wextra %:t -o %:r && ./%:r < input.txt<CR>
-autocmd FileType cpp noremap <F7>  :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -fsanitize=address -g -Og -Wall -Wextra %:t -o %:r && ./%:r <CR>
+autocmd FileType cpp noremap <F6> :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -fsanitize=address -g -Og -Wall -Wextra %:t -o %:r && ./%:r < input.txt<CR>
+autocmd FileType cpp noremap <F7> :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -fsanitize=address -g -Og -Wall -Wextra %:t -o %:r && ./%:r <CR>
 
-autocmd FileType cpp noremap <F8>  :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r < input.txt<CR>
-autocmd FileType cpp noremap <F9>  :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r<CR>
-autocmd FileType cpp noremap <F10> :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r < input.txt > output.txt<CR>
+autocmd FileType cpp noremap <F8> :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r < input.txt<CR>
+autocmd FileType cpp noremap <F9> :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r<CR>
+autocmd FileType cpp noremap <F10> :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r < input.txt > output.txt & ; tail -f output.txt<CR>
 
 let &t_SI = "\e[6 q"  " Modalità inserimento (linea verticale)
 let &t_EI = "\e[2 q"  " Modalità normale (blocco)
