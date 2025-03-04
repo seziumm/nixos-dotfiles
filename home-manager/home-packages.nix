@@ -1,8 +1,11 @@
 { pkgs, ... }: {
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowBroken = true;
+
 
   home.packages = with pkgs; [
-    # Packages in each category are sorted alphabetically
+    temurin-bin-17
+    prismlauncher
 
     # imv
     mpv

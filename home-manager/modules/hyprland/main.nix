@@ -78,7 +78,7 @@
         repeat_rate = 30;
         accel_profile = "flat";
 
-        scroll_factor = 1.5; # all input default scroll_factor, for example mouse
+        scroll_factor = 1.0; # all input default scroll_factor, for example mouse
 
         touchpad = {
           natural_scroll = false; 
