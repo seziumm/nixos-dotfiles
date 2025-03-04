@@ -4,11 +4,12 @@
 
 
   home.packages = with pkgs; [
-    temurin-bin-17
+    temurin-bin-17 # jdk
     prismlauncher
 
     # imv
     mpv
+
 
 
     # CLI utils
@@ -39,6 +40,8 @@
     # bemoji
     # nix-prefetch-scripts
 
+    # bluetooth 
+    bluetuith
 
 
    # sezium stuff
