@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 HYPRCTL="hyprctl keyword animations:enabled"
 
