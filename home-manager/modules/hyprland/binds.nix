@@ -43,6 +43,8 @@
 				"$mainMod Alt, k, resizeactive,   0 -40"
 
 				"$mainMod, S, exec, grim -g \"$(slurp -w 0)\" ~/Media/Pictures/screenshots/$(date +'%s')_grim.png"
+				"$mainMod, A, exec, ~/scripts/animation.sh"
+
 
 				"$mainMod, mouse_down, workspace, e+1"
 				"$mainMod, mouse_up, workspace, e-1"
