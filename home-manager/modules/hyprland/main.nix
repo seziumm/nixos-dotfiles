@@ -4,8 +4,12 @@
     enable = true;
     systemd.enable = true;
 
+    # xwayland.enable = true; # it fixes some windows see wiki
 
     settings = {
+
+    xwayland = {   force_zero_scaling = true; }; # fixes some issue with font aliasing
+
       env = [
         # Hint Electron apps to use Wayland
         "NIXOS_OZONE_WL,1"
