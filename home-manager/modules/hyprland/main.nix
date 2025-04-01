@@ -72,7 +72,12 @@
       };
 
       animations = {
-        enabled = false;
+        enabled = true;
+
+        animations = [
+          { name = "windowsMove"; speed = 1; style = 10; curve = "dragEffect"; }
+
+        ];
       };
 
       input = {
