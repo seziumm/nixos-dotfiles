@@ -74,10 +74,8 @@
       animations = {
         enabled = true;
 
-        animations = [
-          { name = "windowsMove"; speed = 1; style = 10; curve = "dragEffect"; }
+        # @TODO aggiungere animationi di lag 
 
-        ];
       };
 
       input = {
