@@ -91,6 +91,7 @@
           natural_scroll = false; 
           disable_while_typing = false;
           scroll_factor = 0.3; # touchpad scroll factor
+
         };
 
 

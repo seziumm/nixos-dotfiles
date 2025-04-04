@@ -3,5 +3,5 @@
     enable = true;
     # xwayland.enable = false;
   };
-
+ 
 }

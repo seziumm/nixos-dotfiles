@@ -5,6 +5,9 @@
     ./hardware-configuration.nix
     ./boot.nix
     ./local-packages.nix
+
+    ./intel-drivers.nix
+
     ../../nixos/modules
   ];
 
