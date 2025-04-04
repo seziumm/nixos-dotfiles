@@ -54,7 +54,6 @@
    oh-my-posh # set terminal theme
    brave
    wl-gammactl
-   vim-full
    fastfetch
    zoxide # better cd
 
