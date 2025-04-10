@@ -5,7 +5,6 @@
   nixpkgs.config.allowUnfree = true;
 
 
-boot.kernelModules = [ "nvidia" ];
 # Enable OpenGL
   hardware.graphics = {
     enable = true;
