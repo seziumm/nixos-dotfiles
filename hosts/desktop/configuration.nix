@@ -3,6 +3,7 @@
 {
   imports = [
     ./boot.nix
+    ./kernel.nix
     ./nvidia.nix
     ./hardware-configuration.nix
     ./local-packages.nix
