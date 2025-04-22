@@ -31,7 +31,7 @@ tooltip {
 }
 #clock{
   padding: 0px 5px;
-  color:@color7;
+  color: white;
   transition: all .3s ease;
 }
 #workspaces {
@@ -109,18 +109,16 @@ tooltip {
   animation-direction: alternate;
 }
 #group-expand{
-  padding: 0px 5px;
   transition: all .3s ease; 
 
   color:rgba(255,255,255,255);
 }
 #custom-expand{
-  padding: 0px 5px;
-  color: black;
+  color: white;
   transition: all .3s ease; 
 }
 #custom-expand:hover{
-  color: black;
+  color: white;
 }
 
 #cpu,#memory,#temperature{
@@ -130,7 +128,7 @@ tooltip {
 
 }
 #custom-endpoint{
-  color: black;
+  color: white;
 
 }
 #tray{
