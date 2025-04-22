@@ -51,6 +51,7 @@
     "on-click": "kitty nmtui"
   },
   "bluetooth": {
+    "interval": 1, 
     "format-on": "",
     "format-off": "󰂲",
     "format-disabled": "no 󰂲",
@@ -65,7 +66,7 @@
     "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\nBattery: {device_battery_percentage}%",
 
     "on-click-right": "sh -c 'blueman-manager'",
-    "on-click-left": "~/scripts/bluetooth-toggle.sh"
+    "on-click": "~/scripts/bluetooth-toggle.sh"
   },
   "battery": {
     "interval": 1, 
