@@ -8,6 +8,9 @@
     temurin-bin-17 # jdk
     prismlauncher
 
+    # doc files
+    libreoffice
+
     # imv
     mpv
 
