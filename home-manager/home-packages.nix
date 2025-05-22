@@ -5,6 +5,16 @@
 
 
   home.packages = with pkgs; [
+    (pkgs.writeShellScriptBin "codium" ''
+     export CHROME_EXECUTABLE=${pkgs.chromium}/bin/chromium
+     exec ${pkgs.vscodium}/bin/codium "$@"
+     '')
+    vscodium-fhs
+    chromium
+
+    # can be used with blocs in nixos version 25.5
+    dart
+
     temurin-bin-17 # jdk
     prismlauncher
 
@@ -12,6 +22,9 @@
     mpv
 
 
+# man utils
+    man-pages
+    man-pages-posix
 
     # CLI utils
     brightnessctl

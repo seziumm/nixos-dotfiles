@@ -1,5 +1,6 @@
 {
   imports = [
+    ./codium.nix
     ./nixvim
     ./mpv.nix
     ./oh-my-posh.nix

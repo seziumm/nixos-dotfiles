@@ -1,7 +1,62 @@
+{pkgs, ...}:
 {
+  # Add the plugin using extraPlugins
+    extraPlugins = with pkgs.vimPlugins; [
+      flutter-tools-nvim
+      dart-vim-plugin
+      plenary-nvim  # Required dependency
+      nvim-dap       # Debugger
+      nvim-dap-ui    # Interfaccia grafica
+    ];
+
+    # Configure the plugin using extraConfigLua
+    extraConfigLua = ''
+      require("flutter-tools").setup({
+        debugger = {
+          enabled = true,
+          runInTerminal = true,
+        },
+        widget_guides = {
+          enabled = true,
+        },
+        closing_tags = {
+          highlight = "ErrorMsg",
+          prefix = "// ",
+          enabled = true,
+        },
+        lsp = {
+          color = {
+            enabled = true,
+            background = true,
+            background_color = nil,
+            virtual_text = true,
+          }
+        }
+      })
+    '';
+
+    # Optional: Add key mappings
+    keymaps = [
+      {
+        key = "<leader>fr";
+        action = ":FlutterRun<CR>";
+        options.desc = "Flutter Run";
+      }
+      {
+        key = "<leader>fq";
+        action = ":FlutterQuit<CR>";
+        options.desc = "Flutter Quit";
+      }
+      {
+        key = "<leader>fe";
+        action = ":FlutterEmulators<CR>";
+        options.desc = "Flutter Emulators";
+      }
+    ];
 
   plugins = {
 # parentheses indend lines
+
     indent-blankline = {
       enable = true;
 

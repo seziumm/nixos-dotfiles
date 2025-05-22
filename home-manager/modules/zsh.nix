@@ -1,13 +1,11 @@
+{pkgs, ... }:
 {
-
-
-
 
   programs.zsh = {
     enable = true;
     enableCompletion = true;
 
-    # plugins
+# plugins
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
@@ -22,7 +20,6 @@
       yz = "yazi";
       vif = "~/scripts/vif.sh";
       se = "sudoedit";
-
 
       ".." = "cd ..";
       "..." = "cd ../..";
@@ -59,7 +56,7 @@
 
 # autocomplete with shift + tab
           bindkey '^[[Z' vi-forward-char
- # move it into tmux
+# move it into tmux
 
 
 
@@ -71,16 +68,16 @@
 
 # Unbind Ctrl+Shift+H (backward-delete-char)
 
-          # bindkey -r '\e[1;6H'
+# bindkey -r '\e[1;6H'
 
 # Unbind Ctrl+Shift+L (clear-screen)
-          # bindkey -r '\e[1;6L'
+# bindkey -r '\e[1;6L'
 
 # Unbind Ctrl+Shift+J (down-arrow search or custom binding)
-          # bindkey -r '\e[1;6J'
+# bindkey -r '\e[1;6J'
 
 # Unbind Ctrl+Shift+L (again)
-          # bindkey -r '\e[1;6L'
+# bindkey -r '\e[1;6L'
 
           '';
   };
