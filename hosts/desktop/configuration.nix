@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./kernel.nix
     ./boot.nix
     ./nvidia.nix
     ./hardware-configuration.nix

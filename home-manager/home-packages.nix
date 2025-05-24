@@ -5,11 +5,11 @@
 
 
   home.packages = with pkgs; [
-    (pkgs.writeShellScriptBin "codium" ''
+    (pkgs.writeShellScriptBin "codium-chrome" ''
      export CHROME_EXECUTABLE=${pkgs.chromium}/bin/chromium
      exec ${pkgs.vscodium}/bin/codium "$@"
      '')
-    vscodium-fhs
+    # vscodium-fhs
     chromium
 
     # can be used with blocs in nixos version 25.5

@@ -7,6 +7,7 @@
     ./local-packages.nix
 
     ./intel-drivers.nix
+    ./kernel.nix
 
     ../../nixos/modules
   ];
