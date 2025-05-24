@@ -1,5 +1,4 @@
-{ config, pkgs, stateVersion, hostname, ... }:
-
+{ pkgs, stateVersion, hostname, ... }:
 {
   imports = [
     ./kernel.nix
@@ -10,6 +9,8 @@
     ../../nixos/modules
     ./printer.nix
   ];
+  nixpkgs.config = { allowBroken = true; allowUnfree = true; }
+;
 
   environment.systemPackages = [ pkgs.nvidia-docker pkgs.home-manager ];
 
