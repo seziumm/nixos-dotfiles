@@ -32,7 +32,7 @@
     };
 
 
-    initExtra = ''
+    initContent = ''
 
 
 # version 1.0.0

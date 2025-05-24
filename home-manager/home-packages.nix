@@ -81,10 +81,12 @@
    gcc
    bear
 
-   zathura
-   (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+
+  zathura
   ];
 
+
   fonts.fontconfig.enable = true;
+
 
 }

@@ -30,7 +30,7 @@ in
   ];
 
   programs.vim = {
-    enable = true;
+    enable = false;
     plugins = vimPlugins;
     extraConfig = ''
       colorscheme gruvbox
@@ -38,7 +38,7 @@ in
       syntax on                      " Abilita l'evidenziazione della sintassi
       set number                     " Mostra i numeri di riga
       set relativenumber             " Numeri di riga relativi
-      set tabstop=2                  " Imposta la larghezza del tab a 4 spazi
+      set tabstop=2                  " Imposta la larghezza del tab a 2 spazi
       set shiftwidth=2               " Imposta il numero di spazi per indentazione
       set expandtab                  " Usa spazi invece di tab
       set smartindent                " Indentazione intelligente

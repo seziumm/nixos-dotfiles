@@ -8,6 +8,7 @@
     ./local-packages.nix
     ../../nixos/modules
     ./printer.nix
+    ../../nixos/modules/fonts.nix
   ];
   nixpkgs.config = { allowBroken = true; allowUnfree = true; }
 ;
