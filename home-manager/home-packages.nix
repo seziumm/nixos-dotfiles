@@ -12,8 +12,7 @@
     # vscodium-fhs
     chromium
     # can be used with blocs in nixos version 25.5
-    dart
-    flutter
+    flutter332
 
 
     temurin-bin-17 # jdk
