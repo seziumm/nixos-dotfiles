@@ -99,12 +99,12 @@
       device = [
       {
         name="razer-razer-deathadder-essential";
-        sensitivity=-0.9;
+        sensitivity=-0.65;
       }
-# idk why but when I unplug the mouse hyprland makes another device
+# idk why but when I unplug the mouse hyprland creates another device
       {
         name="razer-razer-deathadder-essential-1";
-        sensitivity=-0.9;
+        sensitivity=-0.65;
       }
       ];
 
