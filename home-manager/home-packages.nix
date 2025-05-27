@@ -13,6 +13,7 @@
     chromium
     # can be used with blocs in nixos version 25.5
     flutter332
+    libreoffice
 
 
     temurin-bin-17 # jdk
