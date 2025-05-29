@@ -16,7 +16,7 @@
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
-        "QT_QPA_PLATFORM,wayland"
+        "QT_QPA_PLATFORM,xcb" # default: wayland, using xcb for android-studio
         "XDG_SCREENSHOTS_DIR,$HOME/screens"
       ];
 
