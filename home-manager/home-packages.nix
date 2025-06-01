@@ -3,6 +3,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
 
+
   home.packages = with pkgs; [
     (pkgs.writeShellScriptBin "codium-chrome" ''
      export CHROME_EXECUTABLE=${pkgs.chromium}/bin/chromium
@@ -10,6 +11,7 @@
      '')
     # vscodium-fhs
     chromium
+    vscode
     # can be used with blocs in nixos version 25.5
     flutter332
     libreoffice

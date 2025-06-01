@@ -12,6 +12,7 @@
     ./timezone.nix
     ./user.nix
     ./ssh.nix
+    ./bash.nix
 
   ];
 }

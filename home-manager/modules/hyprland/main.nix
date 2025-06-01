@@ -4,24 +4,31 @@
     enable = true;
     systemd.enable = true;
 
-    # xwayland.enable = true; # it fixes some windows see wiki
-
     settings = {
 
-    xwayland = {   force_zero_scaling = true; }; # fixes some issue with font aliasing
-
       env = [
+        # see: https://wiki.hyprland.org/Configuring/Environment-variables/
         # Hint Electron apps to use Wayland
         "NIXOS_OZONE_WL,1"
+
+        # XDG specific environment variables are often detected through portals and applications that may set those for you, 
+        # however it is not a bad idea to set them explicitly.
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
-        "QT_QPA_PLATFORM,xcb" # default: wayland, using xcb for android-studio
-        "XDG_SCREENSHOTS_DIR,$HOME/screens"
+
+        "QT_AUTO_SCREEN_SCALE_FACTOR,1" # enables automatic scaling, based on the monitor’s pixel
+        "QT_QPA_PLATFORM,wayland;xcb" # Tell Qt applications to use the Wayland backend, and fall back to x11 if Wayland is unavailable
+        "QT_WAYLAND_DISABLE_WINDOWDECORATION,1" # Disables window decorations on Qt applications
+        "QT_QPA_PLATFORMTHEME,qt5ct" # Tells Qt based applications to pick your theme from qt5ct, use with Kvantum.
+
+        # nvidia settings
+        "GBM_BACKEND,nvidia-drm"
+        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+        "LIBVA_DRIVER_NAME,nvidia"
       ];
 
-      monitor = ",1920x1080@60, auto, 1.2";
-
+      monitor = ",preferred, auto, 1.0";
 
       "layerrule" = "noanim, selection"; 
       # do not remove it otherwise screenshot can not work properly
