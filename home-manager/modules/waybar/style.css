@@ -1,7 +1,5 @@
 
 * {
-  font-size:15px;
-  font-family: "JetBrains Mono Nerd Font";
 }
 window#waybar{
   all:unset;
@@ -31,7 +29,7 @@ tooltip {
 }
 #clock{
   padding: 0px 5px;
-  color:@color7;
+  color: rgba(255, 255, 255, 1); /* Bianco puro */
   transition: all .3s ease;
 }
 #workspaces {

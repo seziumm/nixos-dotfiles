@@ -19,6 +19,10 @@
 
       yz = "yazi";
       vif = "~/scripts/vif.sh";
+      zvif = "~/scripts/zvif.sh";
+      vig = "vi '+Telescope live_grep'";
+
+
       se = "sudoedit";
 
       ".." = "cd ..";

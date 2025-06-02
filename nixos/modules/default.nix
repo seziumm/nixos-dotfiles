@@ -1,5 +1,6 @@
 {
   imports = [
+    ./stylix.nix
     ./audio.nix
     ./bluetooth.nix
     ./env.nix

@@ -9,6 +9,7 @@
     keyMode = "vi";
     terminal = "xterm-256color";
     extraConfig = ''
+      unbind C-b
 
       # required by yazi to work properly
       set -g allow-passthrough on
@@ -17,8 +18,6 @@
 
       set -s escape-time 0
       set -as terminal-features ",kitty*:RGB"
-      bind -n M-r source-file ~/.config/tmux/tmux.conf \; display "Reloaded!"
-
 
       bind -n M-z select-window -t 1
       bind -n M-x select-window -t 2
@@ -44,20 +43,15 @@
       bind -n M-q kill-pane
       bind -n M-Q kill-window
       bind -n M-s kill-session
-
-# Bind Ctrl+Backspace to delete a word backward (zsh)
-# TODO fix it with kitty.
-# kitty should send a recognizable key sequence, but it isn't.
-
-
       '';
 
     plugins = with pkgs;
     [
-      tmuxPlugins.gruvbox
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.yank # Copy to system clipboard
       tmuxPlugins.better-mouse-mode # Mouse support
+      tmuxPlugins.tmux-fzf
+      tmuxPlugins.copycat
     ];
   };
 }

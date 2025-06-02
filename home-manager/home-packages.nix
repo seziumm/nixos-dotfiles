@@ -3,16 +3,13 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
 
-
   home.packages = with pkgs; [
     (pkgs.writeShellScriptBin "codium-chrome" ''
      export CHROME_EXECUTABLE=${pkgs.chromium}/bin/chromium
      exec ${pkgs.vscodium}/bin/codium "$@"
      '')
-    # vscodium-fhs
+
     chromium
-    vscode
-    # can be used with blocs in nixos version 25.5
     flutter332
     libreoffice
 
@@ -20,74 +17,49 @@
     temurin-bin-17 # jdk
     prismlauncher
 
-    # imv
-    mpv
-
-# man utils
+    # CLI utils
+    fastfetch
+    fd # finder
+    fzf
+    btop
+    gh
+    git
+    kitty
     man-pages
     man-pages-posix
+    mpv
+    oh-my-posh # set terminal theme
+    ripgrep
+    tree
+    unzip
+    wget
+    wl-gammactl
+    zathura
+    zip
+    zoxide # better cd
+    bluetuith
+    killall
+    cava
+    gcc
+    bear
 
-    # CLI utils
+
+    # clipboard
+    wl-clipboard
+
+    # hyprland 
+    hyprpaper
     brightnessctl
 
-    ripgrep
-
-    unzip
-    zip
 
 
-    wget
-    wl-clipboard
-    # wtype
 
-    # Coding stuff
-    # nodejs
-    # python311
+    # screenshot
+    grim
+    slurp
+    waybar
 
-    # WM stuff
-    libsForQt5.xwaylandvideobridge
-    libnotify
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
-    hyprpaper
+    brave
 
-    # Other
-    # bemoji
-    # nix-prefetch-scripts
-
-    # bluetooth 
-    bluetuith
-
-
-   # sezium stuff
-   gh
-   git
-   fzf
-   fd # finder
-   kitty
-   oh-my-posh # set terminal theme
-   brave
-   wl-gammactl
-   fastfetch
-   zoxide # better cd
-
-
-   grim
-   slurp
-   waybar
-
-   cava
-
-# @TODO: remove these packages
-   gcc
-   bear
-
-
-  zathura
   ];
-
-
-  fonts.fontconfig.enable = true;
-
-
 }
