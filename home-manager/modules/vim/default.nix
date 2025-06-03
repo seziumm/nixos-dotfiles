@@ -1,16 +1,6 @@
-# # { config, ... }:
-# {
-#
-#   home.file.".vimrc" = {
-#     # Overwrite the file
-#     force = true;
-#     text = builtins.readFile ./.vimrc;
-#   };
-#
-# }
-
 { pkgs, ... }:
 
+# @TODO fix this
 # for cp, run: CocInstall coc-clangd
 let
 vimPlugins = with pkgs.vimPlugins; [
@@ -72,9 +62,6 @@ in
 
       inoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
-
-
       '';
   };
-
 }
