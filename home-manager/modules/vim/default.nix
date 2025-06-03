@@ -11,6 +11,7 @@ vimPlugins = with pkgs.vimPlugins; [
   vim-fugitive
   gruvbox
   coc-nvim
+  vim-wayland-clipboard
 ];
 in
 {
