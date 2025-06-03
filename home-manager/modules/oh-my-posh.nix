@@ -1,5 +1,5 @@
 {
-# see: https://ohmyposh.dev/docs/themes
+  # see: https://ohmyposh.dev/docs/themes
   programs.oh-my-posh = {
     enable = true;
     useTheme = "gruvbox";

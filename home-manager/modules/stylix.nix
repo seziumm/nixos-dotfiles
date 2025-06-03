@@ -2,9 +2,26 @@
 {
   stylix = {
     enable = true;
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    image = ../../home-manager/modules/wallpapers/mountains.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    # @TODO fix oh-my-posh theme not being automatic
+    # @TODO fix tmux
+
+    image = ../../home-manager/modules/wallpapers/flower.png;
+
+
+    cursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
+      size = 24;
+    };
+
+    opacity = {
+      applications = 1.0;
+      terminal = 0.95;
+      desktop = 1.0;
+      popups = 1.0;
+    };
 
     fonts = {
       monospace = {
@@ -22,7 +39,6 @@
         name = "DejaVu Serif";
       };
     };
-
 
     fonts.sizes = {
       terminal = 11;
