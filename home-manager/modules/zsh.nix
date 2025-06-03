@@ -19,7 +19,7 @@
       yz = "yazi";
       vif = "~/scripts/vif.sh";
       zvif = "~/scripts/zvif.sh";
-      vig = "nvim'+Telescope live_grep'";
+      vig = "~/scripts/vig.sh";
 
       se = "sudoedit";
 
