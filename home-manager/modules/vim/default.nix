@@ -9,7 +9,6 @@ vimPlugins = with pkgs.vimPlugins; [
   vim-airline
   nerdtree
   vim-fugitive
-  gruvbox
   coc-nvim
   vim-wayland-clipboard
 ];
@@ -24,7 +23,6 @@ in
     enable = true;
     plugins = vimPlugins;
     extraConfig = ''
-      colorscheme gruvbox
       set bg=dark
       syntax on                      " Abilita l'evidenziazione della sintassi
       set number                     " Mostra i numeri di riga

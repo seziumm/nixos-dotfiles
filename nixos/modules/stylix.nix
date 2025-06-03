@@ -3,7 +3,8 @@
 {
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
     fonts = {
       monospace = {
@@ -34,7 +35,7 @@
     targets = {
       chromium.enable = true;
       console.enable = true;
-      grub.enable = true;
+      # grub.enable = true
     };
   };
 }
