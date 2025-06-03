@@ -1,9 +1,6 @@
 {
 programs.kitty = {
   enable = true;
-  # themeFile = "gruvbox-material-dark-medium";
-  # themeFile = "gruvbox-dark";
-  # font.name = "JetBrainsMono Nerd Font";
   shellIntegration.mode = "no-cursor";
 
   settings = {
@@ -20,12 +17,6 @@ programs.kitty = {
     cursor_blink_interval = "0.0";
 
     mouse_hide_wait = "-1.0";
-
-    # background_opacity = "1.0";
-    # background_blur = 0;
-    #
-    # font_size = "11.0";
-
   };
 };
 }

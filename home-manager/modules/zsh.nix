@@ -5,7 +5,6 @@
     enable = true;
     enableCompletion = true;
 
-# plugins
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
@@ -20,8 +19,7 @@
       yz = "yazi";
       vif = "~/scripts/vif.sh";
       zvif = "~/scripts/zvif.sh";
-      vig = "vi '+Telescope live_grep'";
-
+      vig = "nvim'+Telescope live_grep'";
 
       se = "sudoedit";
 
@@ -53,8 +51,6 @@
 # autocomplete with shift + tab
           bindkey '^[[Z' vi-forward-char
 # move it into tmux
-
-
 
 
 

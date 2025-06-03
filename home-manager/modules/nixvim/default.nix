@@ -4,8 +4,6 @@
   programs.nixvim = {
     enable = true;
 
-    viAlias = true;
-
     imports = [
       ./options.nix
       ./plugins.nix
@@ -13,7 +11,6 @@
     ];
 
     globals.mapleader = " ";
-
 
   };
 

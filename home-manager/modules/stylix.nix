@@ -25,7 +25,7 @@
 
     fonts.sizes = {
       terminal = 11;
-      applications = 11;
+      applications = 12;
       popups = 10;
       desktop = 10;
     };
@@ -43,7 +43,6 @@
       waybar.enable = true;
       wofi.enable = true;
       zathura.enable = true;
-
     };
   };
 }

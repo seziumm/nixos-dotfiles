@@ -30,7 +30,7 @@ in
   ];
 
   programs.vim = {
-    enable = false;
+    enable = true;
     plugins = vimPlugins;
     extraConfig = ''
       colorscheme gruvbox
