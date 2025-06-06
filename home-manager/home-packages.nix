@@ -8,13 +8,28 @@
      export CHROME_EXECUTABLE=${pkgs.chromium}/bin/chromium
      exec ${pkgs.vscodium}/bin/codium "$@"
      '')
+    vscodium-fhs
+    android-studio-full
 
-    chromium
+
+    gtk4
+
+    ags
+
     flutter332
+
+
+    spotify
+    telegram-desktop
+    discord
+
+    # browser
+    brave
+    chromium
+
     libreoffice
 
-
-    temurin-bin-17 # jdk
+    # games
     prismlauncher
 
     # CLI utils
@@ -33,7 +48,6 @@
     tree
     unzip
     wget
-    wl-gammactl
     zathura
     zip
     zoxide # better cd
@@ -44,14 +58,13 @@
     bear
 
 
-    # clipboard
-    wl-clipboard
 
     # hyprland 
     hyprpaper
     brightnessctl
 
-
+    wl-clipboard
+    wl-gammactl
 
 
     # screenshot
@@ -59,7 +72,6 @@
     slurp
     waybar
 
-    brave
 
   ];
 }

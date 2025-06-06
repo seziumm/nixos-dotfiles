@@ -51,11 +51,14 @@
       fzf.enable = true;
       gtk.enable = true;
       hyprland.enable = true;
+      yazi.enable = true;
       kitty.enable = true;
       mpv.enable = true;
       neovim.enable = true;
       qt.enable = true;
       tmux.enable = true;
+      nixcord.enable = true; # discord
+      spotify-player.enable = true;
       vim.enable = true;
       waybar.enable = true;
       wofi.enable = true;

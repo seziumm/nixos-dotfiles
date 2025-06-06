@@ -10,7 +10,7 @@ programs.kitty = {
     window_padding_width = "0 0";
     window_margin_width = "0 0";
 
-    cursor_trail = "1";
+    cursor_trail = "0"; # ENABLE OR DISABLE CURSOR ANIMATION
     cursor_trail_decay = "0.1 0.4";
 
     cursor_shape = "block";
