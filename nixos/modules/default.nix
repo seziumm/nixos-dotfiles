@@ -14,6 +14,7 @@
     ./user.nix
     ./ssh.nix
     ./bash.nix
+    ./ld.nix
 
   ];
 }

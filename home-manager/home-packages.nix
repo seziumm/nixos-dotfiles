@@ -2,6 +2,7 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
+  nixpkgs.config.android_sdk.accept_license = true;
 
   home.packages = with pkgs; [
     (pkgs.writeShellScriptBin "codium-chrome" ''
@@ -9,10 +10,9 @@
      exec ${pkgs.vscodium}/bin/codium "$@"
      '')
     vscodium-fhs
-    android-studio-full
-
 
     gtk4
+    postman
 
     ags
 
@@ -65,6 +65,8 @@
 
     wl-clipboard
     wl-gammactl
+    wf-recorder
+    pavucontrol
 
 
     # screenshot
