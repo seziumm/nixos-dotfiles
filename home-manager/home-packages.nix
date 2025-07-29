@@ -2,6 +2,7 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
+
   nixpkgs.config.android_sdk.accept_license = true;
 
   home.packages = with pkgs; [
@@ -9,16 +10,25 @@
      export CHROME_EXECUTABLE=${pkgs.chromium}/bin/chromium
      exec ${pkgs.vscodium}/bin/codium "$@"
      '')
-    vscodium-fhs
+
+    xournalpp
+    gnome-calculator
+
+    xfce.thunar
+    xfce.thunar-volman
+    xfce.thunar-archive-plugin
+    xfce.thunar-dropbox-plugin
 
     gtk4
-    postman
 
     ags
 
-    flutter332
+    # backend 
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
 
-
+    github-desktop
     spotify
     telegram-desktop
     discord
@@ -66,7 +76,6 @@
     wl-clipboard
     wl-gammactl
     wf-recorder
-    pavucontrol
 
 
     # screenshot
@@ -76,4 +85,6 @@
 
 
   ];
+
+
 }

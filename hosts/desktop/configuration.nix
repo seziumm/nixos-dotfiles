@@ -20,6 +20,10 @@
   system.stateVersion = stateVersion;
 
 
+  # used in github desktop
+  services.gnome.gnome-keyring.enable = true;
+  
+  programs.seahorse.enable = true;  # Optional GUI to manage keys
 
 
 

@@ -1,5 +1,6 @@
 {
   imports = [
+  ./ld.nix
     ./stylix.nix
     ./audio.nix
     ./bluetooth.nix
@@ -14,7 +15,6 @@
     ./user.nix
     ./ssh.nix
     ./bash.nix
-    ./ld.nix
 
   ];
 }
