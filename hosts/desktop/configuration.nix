@@ -1,4 +1,5 @@
 { pkgs, stateVersion, hostname, ... }:
+
 {
   imports = [
     ./kernel.nix
@@ -11,7 +12,7 @@
     ../../nixos/modules/fonts.nix
   ];
   nixpkgs.config = { allowBroken = true; allowUnfree = true; }
-;
+  ;
 
   environment.systemPackages = [ pkgs.nvidia-docker pkgs.home-manager ];
 
@@ -19,10 +20,9 @@
 
   system.stateVersion = stateVersion;
 
-
-  # used in github desktop
+# used in github desktop
   services.gnome.gnome-keyring.enable = true;
-  
+
   programs.seahorse.enable = true;  # Optional GUI to manage keys
 
 

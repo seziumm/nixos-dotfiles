@@ -13,6 +13,7 @@
 
     xournalpp
     gnome-calculator
+    pavucontrol
 
     xfce.thunar
     xfce.thunar-volman
