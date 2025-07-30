@@ -53,6 +53,7 @@
       tmuxPlugins.better-mouse-mode # Mouse support
       tmuxPlugins.tmux-fzf
       tmuxPlugins.copycat
+      tmuxPlugins.resurrect
     ];
   };
 }
