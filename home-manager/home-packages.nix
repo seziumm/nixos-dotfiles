@@ -20,6 +20,9 @@
     xfce.thunar-archive-plugin
     xfce.thunar-dropbox-plugin
 
+
+    obs-studio
+
     gtk4
 
     ags
