@@ -1,14 +1,12 @@
 {
   programs.wofi = {
     enable = true;
-    # settings = {
-    #   allow_markup = true;
-    #   allow_images = true;
-    #   width = 350;
-    #   height = 450;
-    # };
+    settings = {
+      allow_markup = true;
+      allow_images = true;
+    };
   };
 
-  # home.file.".config/wofi/style.css".source = ./style.css;
+  home.file.".config/wofi/gruvbox.css".source = ./gruvbox.css;
 }
 

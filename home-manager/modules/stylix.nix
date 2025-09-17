@@ -60,8 +60,8 @@
       nixcord.enable = true; # discord
       spotify-player.enable = true;
       vim.enable = true;
-      waybar.enable = true;
-      wofi.enable = true;
+      # waybar.enable = true;
+      # wofi.enable = true;
       zathura.enable = true;
     };
   };
