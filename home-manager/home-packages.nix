@@ -20,6 +20,8 @@
     xfce.thunar-archive-plugin
     xfce.thunar-dropbox-plugin
 
+    #send files between devices
+    localsend
 
     obs-studio
 
@@ -45,6 +47,11 @@
 
     # games
     prismlauncher
+
+    minecraft
+    mesa
+    libGL
+
 
     # CLI utils
     fastfetch

@@ -19,6 +19,9 @@
       set -s escape-time 0
       set -as terminal-features ",kitty*:RGB"
 
+      set -g @resurrect-dir '~/.tmux/resurrect'
+      set -g @continuum-restore 'on'
+
       bind -n M-z select-window -t 1
       bind -n M-x select-window -t 2
       bind -n M-c select-window -t 3
@@ -53,7 +56,10 @@
       tmuxPlugins.better-mouse-mode # Mouse support
       tmuxPlugins.tmux-fzf
       tmuxPlugins.copycat
+
+
       tmuxPlugins.resurrect
+      tmuxPlugins.continuum
     ];
   };
 }

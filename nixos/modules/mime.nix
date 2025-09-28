@@ -14,8 +14,7 @@
       "audio/ogg" = "mpv.desktop";
 
       "application/pdf" = "org.pwmt.zathura.desktop";
-
-      "inode/directory" = "yazi.desktop";
+      "inode/directory" = "thunar.desktop";
     };
   };
 }
