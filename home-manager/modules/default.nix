@@ -1,6 +1,7 @@
 {
   imports = [
     ./bat.nix
+    ./mprs.nix
     ./codium.nix
     ./directories.nix
     ./eww.nix

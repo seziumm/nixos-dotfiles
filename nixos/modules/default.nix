@@ -1,12 +1,11 @@
 {
   imports = [
-  ./ld.nix
+    ./ld.nix
+    ./env.nix
     ./stylix.nix
     ./audio.nix
     ./bluetooth.nix
-    ./env.nix
     ./home-manager.nix
-    ./hyprland.nix
     ./mime.nix
     ./net.nix
     ./nh.nix
@@ -15,6 +14,6 @@
     ./user.nix
     ./ssh.nix
     ./bash.nix
-
+    ./icons.nix
   ];
 }

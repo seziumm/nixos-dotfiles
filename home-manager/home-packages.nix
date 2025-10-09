@@ -11,6 +11,11 @@
      exec ${pkgs.vscodium}/bin/codium "$@"
      '')
 
+
+    flutter
+    vscodium
+
+
     xournalpp
     gnome-calculator
     pavucontrol

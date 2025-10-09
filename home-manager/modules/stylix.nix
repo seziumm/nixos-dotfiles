@@ -2,6 +2,7 @@
 {
   stylix = {
     enable = true;
+    polarity = "either";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     # @TODO fix oh-my-posh theme not being automatic
@@ -22,6 +23,7 @@
       desktop = 1.0;
       popups = 1.0;
     };
+
 
     fonts = {
       monospace = {
@@ -48,6 +50,7 @@
     };
 
     targets = {
+      nixos-icons.enable = true;
       fzf.enable = true;
       gtk.enable = true;
       hyprland.enable = true;
@@ -65,4 +68,10 @@
       zathura.enable = true;
     };
   };
+
+  # Tema delle icone per XFCE
+  services.xserver.desktopManager.xfce.settings = {
+    xfce4-settings.icon-theme = "Papirus-Dark";
+  };
+
 }

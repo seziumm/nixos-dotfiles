@@ -2,14 +2,13 @@
 
 {
   imports = [
+    ./printer.nix
     ./kernel.nix
     ./boot.nix
     ./nvidia.nix
-    ./hardware-configuration.nix
     ./local-packages.nix
+    ./hardware-configuration.nix
     ../../nixos/modules
-    ./printer.nix
-    ../../nixos/modules/fonts.nix
   ];
 
   nixpkgs.config = {
