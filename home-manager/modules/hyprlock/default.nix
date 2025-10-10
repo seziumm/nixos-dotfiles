@@ -1,8 +1,17 @@
 # see
+# also hyprlock documentation is head of hyprlock nix packages version, so i can't manage animation...
 # https://mynixos.com/home-manager/options/programs.hyprlock
+# TODO use stylix with this color...
 {
   programs.hyprlock = {
     enable = true;
+    importantPrefixes = [
+        # "$"
+        # "bezier"
+        # "monitor"
+        # "size"
+        # "input-field"
+    ];
     extraConfig = ''
 # BACKGROUND
       background {
@@ -17,15 +26,21 @@
 
 # GENERAL
     general {
-      no_fade_in = false
-        grace = 0
-        disable_loading_bar = false
+      grace = 0
     }
+# ANIMATION
+animations {
+    enabled = true
+    bezier = linear, 1, 1, 0, 0
+    animation = fadeIn, 1, 5, linear
+    animation = fadeOut, 1, 5, linear
+    animation = inputFieldDots, 1, 2, linear
+}
 
 # Profie-Photo
     image {
       monitor =
-        path = ~/Media/Pictures/wallpapers/flower.png
+        path = ~/Media/Pictures/wallpapers/icon.png
         border_size = 2
         border_color = rgba(255, 255, 255, 0)
         size = 130
@@ -44,7 +59,6 @@
         text = cmd[update:1000] echo -e "$(date +"%A, %B %d")"
         color = rgba(216, 222, 233, 0.70)
         font_size = 25
-        font_family = SF Pro Display Bold
         position = 0, 350
         halign = center
         valign = center
@@ -55,8 +69,7 @@
       monitor =
         text = cmd[update:1000] echo "<span>$(date +"%I:%M")</span>"
         color = rgba(216, 222, 233, 0.70)
-        font_size = 120
-        font_family = SF Pro Display Bold
+        font_size = 100
         position = 0, 250
         halign = center
         valign = center
@@ -88,7 +101,6 @@
         dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
         dots_center = true
         font_size = 18
-        font_family = SF Pro Display Bold
         position = 0, -130
         halign = center
         valign = center
@@ -106,8 +118,7 @@
         inner_color = rgba(255, 255, 255, 0.1)
         font_color = rgb(200, 200, 200)
         fade_on_empty = false
-        font_family = SF Pro Display Bold
-        placeholder_text = <i><span foreground="##ffffff99">Enter Pass</span></i>
+        placeholder_text = <i><span foreground="##ffffff99">🔒 Enter Pass</span></i>
         hide_input = false
         position = 0, -210
         halign = center
@@ -120,7 +131,6 @@
         text = cmd[update:1000] echo "$(~/scripts/songdetail.sh)" 
         color = rgba(255, 255, 255, 0.6)
         font_size = 18
-        font_family = JetBrains Mono Nerd, SF Pro Display Bold
         position = 0, 50
         halign = center
         valign = bottom

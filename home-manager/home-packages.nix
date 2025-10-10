@@ -31,11 +31,9 @@
     #send files between devices
     localsend
 
-    obs-studio
+    # obs-studio
 
     gtk4
-
-    ags
 
     # backend 
     xdg-desktop-portal
@@ -43,13 +41,12 @@
     xdg-desktop-portal-hyprland
 
     github-desktop
-    spotify
-    telegram-desktop
-    discord
+    # spotify
+    # telegram-desktop
+    # discord
 
     # browser
     brave
-    chromium
 
     libreoffice
 
@@ -87,21 +84,16 @@
     bear
 
 
-
-    # hyprland 
     hyprpaper
     brightnessctl
 
     wl-clipboard
-    wl-gammactl
     wf-recorder
-
 
     # screenshot
     grim
     slurp
     waybar
-
 
   ];
 

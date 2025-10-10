@@ -54,6 +54,7 @@
       fzf.enable = true;
       gtk.enable = true;
       hyprland.enable = true;
+      hyprlock.enable = false;
       yazi.enable = true;
       kitty.enable = true;
       mpv.enable = true;
