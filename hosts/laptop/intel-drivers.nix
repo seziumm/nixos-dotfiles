@@ -8,12 +8,15 @@ in
     enable = mkEnableOption "Enable Intel Graphics Drivers";
   };
 
+
+
   config = mkIf cfg.enable {
     nixpkgs.config.packageOverrides = pkgs: {
       vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
     };
 
     hardware.graphics = {
+      enable = true;
       extraPackages = with pkgs; [
         intel-media-driver
         libvdpau-va-gl
