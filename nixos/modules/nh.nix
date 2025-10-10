@@ -20,7 +20,7 @@
     # --keep 3 → keep the last 3 generations/backups regardless of date
     # Note: these arguments only apply when running `nh clean`, not with `nixos-rebuild`.
 
-    flake = "/home/${user}/.config/nixos-dotfiles/hosts";  
+    flake = "/home/${user}/.config/nixos-dotfiles";  
     # Path to the dotfiles flake managed by NH. `${user}` is substituted with the username.
   };
 }
