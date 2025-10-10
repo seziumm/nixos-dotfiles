@@ -6,8 +6,10 @@
     mouse = true;
     escapeTime = 0;
 
+    historyLimit = 1000;
     keyMode = "vi";
     terminal = "xterm-256color";
+
     extraConfig = ''
       unbind C-b
 

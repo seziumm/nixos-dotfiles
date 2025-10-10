@@ -1,15 +1,17 @@
 {
   wayland.windowManager.hyprland.settings = {
     bind = [
+				"$mainMod, D, exec, $menu"
 				"$mainMod, ESCAPE, exit"
-				"$mainMod, T, exec, $terminal"
+				"$mainMod, F, togglefloating"
+				"$mainMod, O, togglesplit"
+				"$mainMod, P, pseudo"
 				"$mainMod, Q, killactive"
 				"$mainMod, R, exec, $fileManager"
-				"$mainMod, F, togglefloating"
-				"$mainMod, D, exec, $menu"
-				"$mainMod, P, pseudo"
-				"$mainMod, O, togglesplit"
-				"$mainMod, Space, fullscreen"
+				"$mainMod, SPACE, fullscreen"
+				"$mainMod, T, exec, $terminal"
+        "$mainMod, U, exec, $powerMenu"
+        "$mainMod, 0, exec, $lockScreen"
 
 				"$mainMod, L, movefocus, l"
 				"$mainMod, H, movefocus, r"
@@ -68,13 +70,12 @@
       ",XF86MonBrightnessUp,   exec, brightnessctl set +5%"
     ];
 
-    # Audio playback idk if it works
-    # bindl = [
-    #   ", XF86AudioNext,  exec, playerctl next"
-    #   ", XF86AudioPause, exec, playerctl play-pause"
-    #   ", XF86AudioPlay,  exec, playerctl play-pause"
-    #   ", XF86AudioPrev,  exec, playerctl previous"
-    # ];
+    bindl = [
+      ", XF86AudioNext,  exec, playerctl next"
+      ", XF86AudioPause, exec, playerctl play-pause"
+      ", XF86AudioPlay,  exec, playerctl play-pause"
+      ", XF86AudioPrev,  exec, playerctl previous"
+    ];
   };
 
 

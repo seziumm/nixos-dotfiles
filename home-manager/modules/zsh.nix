@@ -8,13 +8,10 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    history.size = 1000;
+    history.size = 10000;
     history.path = "$HOME/.zshhistory";
 
     shellAliases = {
-      sw = "nh os switch";
-      upd = "nh os switch --update";
-      hms = "nh home switch";
 
       yz = "yazi";
       vif = "~/scripts/vif.sh";
@@ -27,12 +24,10 @@
       "..." = "cd ../..";
       "...." = "cd ../../..";
 
-
       cp = "cp -v";
       rm = "rm -v";
 
     };
-
 
     initContent = ''
 

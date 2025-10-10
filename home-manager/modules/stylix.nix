@@ -69,9 +69,4 @@
     };
   };
 
-  # Tema delle icone per XFCE
-  services.xserver.desktopManager.xfce.settings = {
-    xfce4-settings.icon-theme = "Papirus-Dark";
-  };
-
 }

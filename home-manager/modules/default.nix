@@ -1,22 +1,22 @@
 {
   imports = [
     ./bat.nix
-    ./mprs.nix
-    ./codium.nix
     ./directories.nix
-    ./eww.nix
     ./eza.nix
     ./git.nix
     ./hyprland
     ./kitty.nix
+    ./mprs.nix
     ./mpv.nix
     ./nixvim
     ./oh-my-posh.nix
     ./stylix.nix
     ./tmux.nix
     ./vim
+    ./hyprlock
     ./waybar
     ./wofi
+    ./wofi-power-menu
     ./yazi.nix
     ./zathura.nix
     ./zoxide.nix

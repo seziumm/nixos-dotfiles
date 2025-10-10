@@ -3,14 +3,17 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
 
-  nixpkgs.config.android_sdk.accept_license = true;
-
   home.packages = with pkgs; [
     (pkgs.writeShellScriptBin "codium-chrome" ''
      export CHROME_EXECUTABLE=${pkgs.chromium}/bin/chromium
      exec ${pkgs.vscodium}/bin/codium "$@"
      '')
 
+
+    playerctl # needed tho show lock screen current song and other stuff
+    wofi-emoji
+    wofi-power-menu
+    wofi-pass
 
     flutter
     vscodium

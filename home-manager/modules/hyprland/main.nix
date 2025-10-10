@@ -37,12 +37,13 @@
       "$terminal" = "kitty";
       "$fileManager" = "$terminal zsh -c yazi";
       "$menu" = "wofi --show drun";
+      "$powerMenu" = "wofi-power-menu";
+      "$lockScreen" = "hyprlock";
       "$browser" = "brave";
 
       exec-once = [
-        "hyprpaper"
+        # "hyprpaper"
         "waybar"
-        # "wl-gammactl -c 1.0 -b 1.0 -g 0.775"
 
         "[workspace 1 silent] $browser"
         "[workspace 2 silent] $terminal"

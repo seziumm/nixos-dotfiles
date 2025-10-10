@@ -1,9 +1,7 @@
-
-* {
-}
-window#waybar{
+window#waybar {
   all:unset;
 }
+
 .modules-left {
   padding:7px;
   margin:5px;
