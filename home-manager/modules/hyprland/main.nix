@@ -88,15 +88,17 @@
           "dragEffect, 0, 1, 0.4, 1"
         ];
 
+        # animation = NAME, ONOFF, SPEED, CURVE [,STYLE]
         animation = [
-          "windowsMove, 1, 10, dragEffect"
+          "windowsMove, 1, 20, dragEffect"
 
-            "windows, 1, 7, myBezier"
+            "windows, 1, 10, myBezier"
             "windowsOut, 1, 10, default, popin 80%"
-            "border, 1, 10, default"
-            "borderangle, 1, 8, default"
+            "windowsIn, 1, 10, dragEffect, popin 20%"
+            # "border, 1, 10, default"
+            # "borderangle, 1, 8, default"
             "fade, 1, 3, myBezier2"
-            "layersIn, 1, 5, myBezier2, slide"
+            "layersIn, 1, 5, myBezier2, fade"
 
 
             "workspaces, 1, 5, myBezier2"
