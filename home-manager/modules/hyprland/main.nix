@@ -93,8 +93,8 @@
           "windowsMove, 1, 20, dragEffect"
 
             "windows, 1, 10, myBezier"
-            "windowsOut, 1, 10, default, popin 80%"
-            "windowsIn, 1, 10, dragEffect, popin 20%"
+            "windowsOut, 1, 4, default, popin 80%"
+            "windowsIn, 1, 4, dragEffect, popin 20%"
             # "border, 1, 10, default"
             # "borderangle, 1, 8, default"
             "fade, 1, 3, myBezier2"

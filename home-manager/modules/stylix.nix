@@ -3,8 +3,8 @@
   stylix = {
     enable = true;
     polarity = "either";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+   base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     # @TODO fix oh-my-posh theme not being automatic
     # @TODO fix tmux
 
@@ -24,21 +24,35 @@
       popups = 1.0;
     };
 
+    icons = {
+      enable = true;
+      package = pkgs.gruvbox-plus-icons;
+      light = "Gruvbox-Plus-Light";
+      dark = "Gruvbox-Plus-Dark";
+    };
+
 
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        # package = pkgs.cascadia-code;
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font";
+        # package = pkgs.nerd-fonts.jetbrains-mono;
+        # name = "JetBrainsMono Nerd Font";
       };
 
       sansSerif = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font";
+        # package = pkgs.nerd-fonts.jetbrains-mono;
+        # name = "JetBrainsMono Nerd Font";
       };
 
       serif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font";
+        # package = pkgs.dejavu_fonts;
+        # name = "DejaVu Serif";
       };
     };
 

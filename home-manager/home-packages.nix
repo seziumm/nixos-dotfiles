@@ -1,15 +1,10 @@
 { pkgs, ... }: {
 
   nixpkgs.config.allowUnfree = true;
-
   nixpkgs.config.allowBroken = true;
 
-  home.packages = with pkgs; [
-    (pkgs.writeShellScriptBin "codium-chrome" ''
-     export CHROME_EXECUTABLE=${pkgs.chromium}/bin/chromium
-     exec ${pkgs.vscodium}/bin/codium "$@"
-     '')
 
+  home.packages = with pkgs; [
 
     # Development
     gnumake
@@ -23,15 +18,17 @@
     gnome-calculator
     pavucontrol
 
+    xfce.xfconf # needed to customize thunar
+    gvfs # Mount, trash, and other functionalities
+    xfce.tumbler # Thumbnail support for images
     xfce.thunar
-    xfce.thunar-volman
     xfce.thunar-archive-plugin
     xfce.thunar-dropbox-plugin
 
     #send files between devices
     localsend
 
-    gtk4
+    # gtk4
 
     github-desktop
 
@@ -83,6 +80,5 @@
     waybar
 
   ];
-
 
 }
