@@ -22,7 +22,7 @@
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1" # Disables window decorations on Qt applications
         "QT_QPA_PLATFORMTHEME,qt5ct" # Tells Qt based applications to pick your theme from qt5ct, use with Kvantum.
 
-        # nvidia settings
+        # NVIDIA settings
         "GBM_BACKEND,nvidia-drm"
         "__GLX_VENDOR_LIBRARY_NAME,nvidia"
         "LIBVA_DRIVER_NAME,nvidia"
@@ -42,7 +42,7 @@
       "$browser" = "brave";
 
       exec-once = [
-        # "hyprpaper"
+        "hyprlock"
         "waybar"
 
         "[workspace 1 silent] $browser"
@@ -82,7 +82,26 @@
       animations = {
         enabled = true;
 
-        # @TODO aggiungere animationi di lag 
+        bezier = [
+          "myBezier, 0.05, 0.9, 0.1, 1.00"
+          "myBezier2, 0, 0.55, 0.45, 1"
+          "dragEffect, 0, 1, 0.4, 1"
+        ];
+
+        animation = [
+          "windowsMove, 1, 10, dragEffect"
+
+            "windows, 1, 7, myBezier"
+            "windowsOut, 1, 10, default, popin 80%"
+            "border, 1, 10, default"
+            "borderangle, 1, 8, default"
+            "fade, 1, 3, myBezier2"
+            "layersIn, 1, 5, myBezier2, slide"
+
+
+            "workspaces, 1, 5, myBezier2"
+
+        ];
 
       };
 
@@ -134,6 +153,7 @@
       };
 
       misc = {
+        animate_mouse_windowdragging = true; # this is for the latency dragging effect with mouse.
         force_default_wallpaper = 0;
         disable_hyprland_logo = true;
       };

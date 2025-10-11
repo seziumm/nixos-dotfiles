@@ -17,8 +17,7 @@
     settings = {
       default_session = {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland --remember --remember-user-session";
-       
-        user = "greeter"; # NOT a username
+        user = user;
       };
     };
   };

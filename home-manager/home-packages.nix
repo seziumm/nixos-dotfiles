@@ -1,6 +1,7 @@
 { pkgs, ... }: {
 
   nixpkgs.config.allowUnfree = true;
+
   nixpkgs.config.allowBroken = true;
 
   home.packages = with pkgs; [
@@ -10,14 +11,13 @@
      '')
 
 
+    # Development
+    gnumake
+    bear
+    gcc
+
     playerctl # needed tho show lock screen current song and other stuff
-    wofi-emoji
     wofi-power-menu
-    wofi-pass
-
-    flutter
-    vscodium
-
 
     xournalpp
     gnome-calculator
@@ -31,19 +31,9 @@
     #send files between devices
     localsend
 
-    # obs-studio
-
     gtk4
 
-    # backend 
-    xdg-desktop-portal
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
-
     github-desktop
-    # spotify
-    # telegram-desktop
-    # discord
 
     # browser
     brave
@@ -54,9 +44,6 @@
     prismlauncher
 
     minecraft
-    mesa
-    libGL
-
 
     # CLI utils
     fastfetch
