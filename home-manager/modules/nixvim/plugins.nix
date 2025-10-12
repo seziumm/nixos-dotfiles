@@ -114,6 +114,7 @@
 
         nixd.enable = true;
         bashls.enable = true;
+        asm_lsp.enable = true;
 
 
 
