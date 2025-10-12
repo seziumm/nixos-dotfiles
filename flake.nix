@@ -25,13 +25,12 @@
   outputs = { nixpkgs, home-manager, nixvim, stylix, ... }@inputs: 
   let
     system = "x86_64-linux";
-    homeStateVersion = "25.05"; # 25.05
+    homeStateVersion = "25.05";
 
     user = "sezium";
-    # user = "lezium";
 
     hosts = [
-      { hostname =  "laptop";  stateVersion = "25.05"; }
+      { hostname = "laptop";   stateVersion = "25.05"; }
       { hostname = "desktop";  stateVersion = "25.05"; }
     ];
 

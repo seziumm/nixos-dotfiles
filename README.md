@@ -1,18 +1,19 @@
-# ❄️ NixOS Config 
+# NixOS Config 
 
 
 
-## ✨ Features
+## Features
 
-- 🖥️ **Multiple Hosts Support**:
-- 🎨 **Gruvbox Theme**:
-- 🪟 **Hyprland + Waybar**: 
-- 🏠 **Home Manager Integration**:
-- 🧇 **Tmux**:
-- 🌟 **Zsh**;
-- 🌟 **Kitty**;
+- **Multiple Hosts Support**:
+- **Gruvbox Theme**:
+- **Hyprland + Waybar**: 
+- **Home Manager Integration**:
+- **Tmux**:
+- **Zsh**;
+- **Kitty**;
+- **Stylix Support**;
 
-## 🚀 Installation
+## Installation
 
 To get started with this setup, follow these steps:
 
@@ -49,15 +50,15 @@ To get started with this setup, follow these steps:
 
     ```diff
     ...
-      outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+      outputs = { self, nixpkgs, home-manager, nixvim, stylix, ... }@inputs: let
         system = "x86_64-linux";
-    --  homeStateVersion = "24.11";
+    --  homeStateVersion = "25.05";
     ++  homeStateVersion = "<your_home_manager_state_version>";
-    --  user = "amper";
+    --  user = "sezium";
     ++  user = "<your_username>";
         hosts = [
-    --    { hostname = "slim3"; stateVersion = "24.05"; }
-    --    { hostname = "330-15ARR"; stateVersion = "24.11"; }
+    --    { hostname = "desktop"; stateVersion = "25.05"; }
+    --    { hostname = "laptop";  stateVersion = "25.05"; }
     ++    { hostname = "<your_hostname>"; stateVersion = "<your_state_version>"; }
         ];
     ...
@@ -66,9 +67,9 @@ To get started with this setup, follow these steps:
 7. **Rebuilding**:
 
     ```bash
-    cd nixos-config-reborn
+    cd nixos-dotfiles
     git add .
-    nixos-rebuild switch --flake ./#<hostname>
+    sudo nixos-rebuild switch --flake ./#<hostname>
     # or nixos-install --flake ./#<hostname> if you are installing on a fresh system
-    home-manager switch
+    home-manager switch --flake ./#sezium
     ```
