@@ -1,5 +1,6 @@
 {
   imports = [
+    ./fastfetch
     ./bat.nix
     ./directories.nix
     ./eza.nix
