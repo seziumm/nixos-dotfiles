@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs, lib, ...}:
 {
 
   plugins = {
@@ -142,6 +142,7 @@
 
     comment.enable = true;
     lualine.enable = true;
+
   };
 
 

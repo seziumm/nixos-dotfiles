@@ -14,6 +14,5 @@
     ./user.nix
     ./ssh.nix
     ./bash.nix
-    ./icons.nix
   ];
 }

@@ -40,7 +40,7 @@
     # games
     prismlauncher
 
-    minecraft
+    # minecraft
 
     # CLI utils
     fastfetch
