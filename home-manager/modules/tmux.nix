@@ -13,6 +13,10 @@
     extraConfig = ''
       unbind C-b
 
+      # default shell 
+      set -g default-command ${pkgs.zsh}/bin/zsh
+
+
       # required by yazi to work properly
       set -g allow-passthrough on
       set -ga update-environment TERM

@@ -6,6 +6,19 @@
 
   home.packages = with pkgs; [
 
+
+
+    obs
+    # flutter dev
+    flutter
+    vscodium
+    chromium
+
+    discord
+
+    protonvpn-gui
+
+
     # Development
     gnumake
     bear
@@ -20,6 +33,7 @@
 
     xfce.xfconf # needed to customize thunar
     gvfs # Mount, trash, and other functionalities
+    xfce.thunar-volman
     xfce.tumbler # Thumbnail support for images
     xfce.thunar
     xfce.thunar-archive-plugin

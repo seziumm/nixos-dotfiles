@@ -1,7 +1,13 @@
 {pkgs, lib, ...}:
 {
 
+  imports = [
+    ./telescope.nix
+  ];
+
   plugins = {
+
+
     indent-blankline = {
       enable = true;
 
@@ -22,13 +28,13 @@
 
     tmux-navigator.enable = true;
 
-    telescope.enable = true;
 
     web-devicons.enable = true;
 
     nvim-tree = {
       enable = true;
       autoReloadOnWrite = true;
+      openOnSetup = true;
       view = {
         number = true;
         relativenumber = true;

@@ -1,6 +1,7 @@
 {
   imports = [
     ./ld.nix
+    ./gvfs.nix
     ./env.nix
     ./stylix.nix
     ./audio.nix

@@ -31,14 +31,10 @@
     { key = "<leader>lx"; action = "<CMD>LspStop<Enter>"; }
     { key = "<leader>ls"; action = "<CMD>LspStart<Enter>"; }
     { key = "<leader>lr"; action = "<CMD>LspRestart<Enter>"; }
-    {
-      key = "gd";
-      action.__raw = "require('telescope.builtin').lsp_definitions";
-    }
-    {
-      key = "K";
-      action = "<CMD>Lspsaga hover_doc<Enter>";
-    }
+    # {
+    #   key = "gd";
+    #   action.__raw = "require('telescope.builtin').lsp_definitions";
+    # }
     ];
   };
 
