@@ -18,9 +18,9 @@
     smartindent = true;
     expandtab = true;
 
-    softtabstop = 2;
-    shiftwidth = 2;
-    tabstop = 2;
+    softtabstop = 4;
+    shiftwidth  = 4;
+    tabstop     = 4;
 
     clipboard = "unnamedplus";
 

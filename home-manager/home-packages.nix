@@ -6,18 +6,13 @@
 
   home.packages = with pkgs; [
 
-
-
     # obs
     # flutter dev
     flutter
-    vscodium
+    vscodium-fhs
     chromium
 
     discord
-
-    protonvpn-gui
-
 
     # Development
     gnumake
