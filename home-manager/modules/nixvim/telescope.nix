@@ -82,10 +82,22 @@
         };
       };
 
+      # vertical and horizzontal split with telescope command
+      "<leader>tvi" = { action = "<cmd>vsplit | lua require('telescope.builtin').command_history()<CR>"; mode = "n"; options = { desc = "VSplit Command History"; silent = true; }; };
+      "<leader>tvb" = { action = "<cmd>vsplit | lua require('telescope.builtin').buffers()<CR>"; mode = "n"; options = { desc = "VSplit Buffers Finder"; silent = true; }; };
+      "<leader>tvc" = { action = "<cmd>vsplit | lua require('telescope.builtin').commands()<CR>"; mode = "n"; options = { desc = "VSplit Commands Finder"; silent = true; }; };
+      "<leader>tvg" = { action = "<cmd>vsplit | lua require('telescope.builtin').live_grep()<CR>"; mode = "n"; options = { desc = "VSplit Telescope Live Grep"; silent = true; }; };
+      "<leader>tvf" = { action = "<cmd>vsplit | lua require('telescope.builtin').find_files()<CR>"; mode = "n"; options = { desc = "VSplit Telescope Find Files"; silent = true; }; };
+      "<leader>tvh" = { action = "<cmd>vsplit | lua require('telescope.builtin').help_tags()<CR>"; mode = "n"; options = { desc = "VSplit Help Tags"; silent = true; }; };
+
+      "<leader>tsi" = { action = "<cmd>split | lua require('telescope.builtin').command_history()<CR>"; mode = "n"; options = { desc = "HSplit Command History"; silent = true; }; };
+      "<leader>tsb" = { action = "<cmd>split | lua require('telescope.builtin').buffers()<CR>"; mode = "n"; options = { desc = "HSplit Buffers Finder"; silent = true; }; };
+      "<leader>tsc" = { action = "<cmd>split | lua require('telescope.builtin').commands()<CR>"; mode = "n"; options = { desc = "HSplit Commands Finder"; silent = true; }; };
+      "<leader>tsg" = { action = "<cmd>split | lua require('telescope.builtin').live_grep()<CR>"; mode = "n"; options = { desc = "HSplit Telescope Live Grep"; silent = true; }; };
+      "<leader>tsf" = { action = "<cmd>split | lua require('telescope.builtin').find_files()<CR>"; mode = "n"; options = { desc = "HSplit Telescope Find Files"; silent = true; }; };
+      "<leader>tsh" = { action = "<cmd>split | lua require('telescope.builtin').help_tags()<CR>"; mode = "n"; options = { desc = "HSplit Help Tags"; silent = true; }; };
+
     };
-
-
-
 
 
 

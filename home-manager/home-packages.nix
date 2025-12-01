@@ -6,13 +6,15 @@
 
   home.packages = with pkgs; [
 
-    # obs
     # flutter dev
     flutter
     vscodium-fhs
     chromium
 
     discord
+    obs-studio
+
+    perf
 
     # Development
     gnumake

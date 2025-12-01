@@ -26,7 +26,7 @@
     }
     {
       key = "<leader>j";
-      action.__raw = "function() vim.diagnostic.jump({ count=1, float=true }) end";
+      action.__raw = "function() vim.dianostic.jump({ count=1, float=true }) end";
     }
     { key = "<leader>lx"; action = "<CMD>LspStop<Enter>"; }
     { key = "<leader>ls"; action = "<CMD>LspStart<Enter>"; }
