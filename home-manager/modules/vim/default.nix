@@ -17,6 +17,7 @@ in
   home.packages = with pkgs; [
     nodejs
     clang-tools  # For C++ LSP (clangd)
+    clang
   ];
 
   programs.vim = {

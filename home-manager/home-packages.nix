@@ -6,6 +6,9 @@
 
   home.packages = with pkgs; [
 
+    telegram-desktop
+    appimage-run
+
     # flutter dev
     flutter
     vscodium-fhs
@@ -19,7 +22,6 @@
     # Development
     gnumake
     bear
-    gcc
 
     playerctl # needed tho show lock screen current song and other stuff
     wofi-power-menu
@@ -75,8 +77,6 @@
     bluetuith
     killall
     cava
-    gcc
-    bear
 
 
     hyprpaper

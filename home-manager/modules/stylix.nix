@@ -22,7 +22,7 @@ base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
 
     opacity = {
       applications = 1.0;
-      terminal = 0.95;
+      terminal = 1.0; # 0.95
       desktop = 1.0;
       popups = 1.0;
     };

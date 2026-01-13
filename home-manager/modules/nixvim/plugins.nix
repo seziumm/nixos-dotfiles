@@ -33,16 +33,21 @@
 
     nvim-tree = {
       enable = true;
-      autoReloadOnWrite = true;
-      openOnSetup = true;
-      view = {
-        number = true;
-        relativenumber = true;
-        side = "left";
-        preserveWindowProportions = true;  # o false
+
+      settings = {
+          autoReloadOnWrite = true;
+          openOnSetup = true;
+          renderer.indentMarkers.enable = true; # render | in nvim tree like indent-blankline
+              view = {
+                  number = true;
+                  relativenumber = true;
+                  side = "left";
+                  preserveWindowProportions = true;  # o false
+
+              };
+
 
       };
-      renderer.indentMarkers.enable = true; # render | in nvim tree like indent-blankline
     };
 
 # syntax and look

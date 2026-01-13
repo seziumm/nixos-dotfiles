@@ -62,7 +62,7 @@
 
       modules = [
         ./home-manager/home.nix
-        nixvim.homeManagerModules.nixvim
+        nixvim.homeModules.nixvim
         stylix.homeModules.stylix
       ];
     };
