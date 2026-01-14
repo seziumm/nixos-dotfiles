@@ -5,21 +5,15 @@
 let
 vimPlugins = with pkgs.vimPlugins; [
   vim-plug
-  fzf-vim
   vim-airline
-  nerdtree
   vim-fugitive
-  coc-nvim
   vim-wayland-clipboard
+  fzf-vim
+  coc-nvim
+  nerdtree
 ];
 in
 {
-  home.packages = with pkgs; [
-    nodejs
-    clang-tools  # For C++ LSP (clangd)
-    clang
-  ];
-
   programs.vim = {
     enable = true;
     plugins = vimPlugins;

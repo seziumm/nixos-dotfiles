@@ -28,23 +28,22 @@
 
     tmux-navigator.enable = true;
 
-
     web-devicons.enable = true;
 
     nvim-tree = {
       enable = true;
 
-      settings = {
-          autoReloadOnWrite = true;
-          openOnSetup = true;
-          renderer.indentMarkers.enable = true; # render | in nvim tree like indent-blankline
-              view = {
-                  number = true;
-                  relativenumber = true;
-                  side = "left";
-                  preserveWindowProportions = true;  # o false
-
-              };
+      settings  = {
+          # autoReloadOnWrite = true;
+          # openOnSetup = true;
+          # renderer.indentMarkers.enable = true; # render | in nvim tree like indent-blankline
+              # view = {
+              #     number = true;
+              #     relativenumber = true;
+              #     side = "left";
+              #     preserveWindowProportions = true;  # o false
+              #
+              # };
 
 
       };
@@ -62,7 +61,7 @@
 # autocomplition
     cmp = {
       enable = true;
-      autoEnableSources = false;
+      autoEnableSources = true;
       settings.sources = [
       { name = "nvim_lsp"; }
       { name = "path"; }
@@ -127,15 +126,10 @@
         bashls.enable = true;
         asm_lsp.enable = true;
 
-
-
 # web
         cssls.enable = true;
         html.enable = true;
         jsonls.enable = true;
-
-
-
 # other
 
         java_language_server.enable = true;

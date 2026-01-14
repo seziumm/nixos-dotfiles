@@ -1,5 +1,5 @@
 # see https://github.com/nix-community/nixvim
-{ inputs, lib, ... }:
+{ pkgs, inputs, lib, ... }:
 {
 
   programs.nixvim = {
@@ -10,7 +10,10 @@
       ./plugins.nix
       ./keymaps.nix
     ];
-
+    extraPackages = with pkgs; [
+        clang
+        clang-tools  # include clangd
+    ];
     globals.mapleader = " ";
 
     lsp.keymaps = [
@@ -31,10 +34,6 @@
     { key = "<leader>lx"; action = "<CMD>LspStop<Enter>"; }
     { key = "<leader>ls"; action = "<CMD>LspStart<Enter>"; }
     { key = "<leader>lr"; action = "<CMD>LspRestart<Enter>"; }
-    # {
-    #   key = "gd";
-    #   action.__raw = "require('telescope.builtin').lsp_definitions";
-    # }
     ];
   };
 

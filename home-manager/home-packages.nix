@@ -3,11 +3,21 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
 
-
   home.packages = with pkgs; [
 
     telegram-desktop
     appimage-run
+
+
+# utils
+    gcc
+    cmake
+    bear
+    gnumake
+# needed in nvim
+    lazygit
+
+
 
     # flutter dev
     flutter
@@ -18,10 +28,6 @@
     obs-studio
 
     perf
-
-    # Development
-    gnumake
-    bear
 
     playerctl # needed tho show lock screen current song and other stuff
     wofi-power-menu

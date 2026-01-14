@@ -11,6 +11,10 @@
     ../../nixos/modules
   ];
 
+
+  xdg.portal.enable = true;
+  services.flatpak.enable = true;
+
   nixpkgs.config = {
     allowBroken = true;
     allowUnfree = true;
