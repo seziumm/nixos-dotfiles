@@ -1,49 +1,59 @@
 {pkgs, ... }:
-{
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
+{  
+    home.sessionPath = [
+        "$HOME/develop/flutter/bin"
+    ];
 
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-
-    history.size = 10000;
-    history.path = "$HOME/.zshhistory";
-
-    shellAliases = {
-
-      yz = "yazi";
-      vif = "~/scripts/vif.sh";
-      zvif = "~/scripts/zvif.sh";
-      vig = "~/scripts/vig.sh";
-
-      se = "sudoedit";
-
-      ".." = "cd ..";
-      "..." = "cd ../..";
-      "...." = "cd ../../..";
-
-      cp = "cp -v";
-      rm = "rm -v";
-
+    home.sessionVariables = {
+        CHROME_EXECUTABLE = "${pkgs.chromium}/bin/chromium";
+        BROWSER = "${pkgs.brave}/bin/brave";
     };
 
-    initContent = ''
+
+    programs.zsh = {
+        enable = true;
+        enableCompletion = true;
+
+        autosuggestion.enable = true;
+        syntaxHighlighting.enable = true;
+
+        history.size = 10000;
+        history.path = "$HOME/.zshhistory";
+
+        shellAliases = {
+
+            yz = "yazi";
+            vif = "~/scripts/vif.sh";
+            zvif = "~/scripts/zvif.sh";
+            vig = "~/scripts/vig.sh";
+
+            se = "sudoedit";
+
+            ".." = "cd ..";
+            "..." = "cd ../..";
+            "...." = "cd ../../..";
+
+            cp = "cp -v";
+            rm = "rm -v";
+
+        };
+
+        initContent = ''
 
 # enable vi mode 
-          bindkey -v
+            bindkey -v
 
 # Bind Ctrl + P to previous history search
-          bindkey '^P' history-search-backward
+            bindkey '^P' history-search-backward
 
 # Bind Ctrl + N to next history search
-          bindkey '^N' history-search-forward
+            bindkey '^N' history-search-forward
 
 # Bind Ctrl + Backspace to remove the last word
-          bindkey '^H' backward-kill-word
+            bindkey '^H' backward-kill-word
 
 # autocomplete with shift + tab
-          bindkey '^[[Z' vi-forward-char
+            bindkey '^[[Z' vi-forward-char
 # move it into tmux
 
 
@@ -65,6 +75,6 @@
 # Unbind Ctrl+Shift+L (again)
 # bindkey -r '\e[1;6L'
 
-          '';
-  };
+            '';
+    };
 }

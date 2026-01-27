@@ -20,8 +20,9 @@
 
 
     # flutter dev
-    flutter
-    vscodium-fhs
+    # vscodium-fhs
+    # code-cursor-fhs
+    code-cursor-fhs
     chromium
 
     discord
