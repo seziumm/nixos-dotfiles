@@ -17,10 +17,6 @@
       "*": [ 1,2,3,4,5 ]
     }
   },
-  "custom/cava": {
-    "format": "{}",
-    "exec": "~/scripts/waybarCava.sh"
-  },
   "custom/power": {
     "tooltip": false,
     "format": "⏻",
@@ -97,7 +93,7 @@
       "transition-to-left": true,
       "click-to-reveal": true
     },
-    "modules": ["custom/expand", "custom/cava", "cpu","memory", "temperature", "custom/endpoint"]
+    "modules": ["custom/expand", "cpu","memory", "temperature", "custom/endpoint"]
 
   },
   "cpu": {

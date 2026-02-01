@@ -1,61 +1,60 @@
 { pkgs, ... }:
 
-# @TODO fix this
-# for cp, run: CocInstall coc-clangd
 let
-vimPlugins = with pkgs.vimPlugins; [
-  vim-plug
-  vim-airline
-  vim-fugitive
-  vim-wayland-clipboard
-  fzf-vim
-  coc-nvim
-  nerdtree
-];
-in
-{
+  vimPlugins = with pkgs.vimPlugins; [
+    vim-plug
+    fzf-vim
+    vim-airline
+    nerdtree
+    vim-fugitive
+    coc-nvim
+    vim-wayland-clipboard
+  ];
+in {
+  home.packages = with pkgs; [
+    nodejs
+    clang-tools
+  ];
+
   programs.vim = {
     enable = true;
     plugins = vimPlugins;
     extraConfig = ''
       set bg=dark
-      syntax on                      " Abilita l'evidenziazione della sintassi
-      set number                     " Mostra i numeri di riga
-      set relativenumber             " Numeri di riga relativi
-      set tabstop=2                  " Imposta la larghezza del tab a 2 spazi
-      set shiftwidth=2               " Imposta il numero di spazi per indentazione
-      set expandtab                  " Usa spazi invece di tab
-      set smartindent                " Indentazione intelligente
-      set autoindent                 " Mantiene l'indentazione
-      set nowrap                     " Evita il wrapping automatico
+      syntax on
+      set number
+      set relativenumber
+      set tabstop=2
+      set shiftwidth=2
+      set expandtab
+      set smartindent
+      set autoindent
+      set nowrap
       set clipboard=unnamedplus
-
       set scrolloff=8
-      set mouse=a 
+      set mouse=a
 
-      autocmd VimEnter * 
-      \ if filereadable('input.txt') | tabedit input.txt | endif |
-      \ execute 'tabfirst'
+      autocmd VimEnter *
+        \ if filereadable('input.txt') | tabedit input.txt | endif |
+        \ execute 'tabfirst'
 
       nnoremap <Tab> :tabprevious<CR>
       nnoremap <S-Tab> :tabnext<CR>
-
       inoremap {<CR> {<CR>}<Esc>O
 
-      autocmd FileType cpp noremap <F6> :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -fsanitize=address -g -Og -Wall -Wextra %:t -o %:r && ./%:r < input.txt<CR>
-      autocmd FileType cpp noremap <F7> :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -fsanitize=address -g -Og -Wall -Wextra %:t -o %:r && ./%:r <CR>
+      augroup CppRun
+        autocmd!
+        autocmd FileType cpp nnoremap <buffer> <F7> :w<CR>:!clear && ./run.sh<CR>
+        autocmd FileType cpp nnoremap <buffer> <F8> :w<CR>:!clear && ./run.sh < input.txt<CR>
+        autocmd FileType cpp nnoremap <buffer> <F9> :w<CR>:!clear && ./run.sh > output.txt<CR>
+        autocmd FileType cpp nnoremap <buffer> <F10> :w<CR>:!clear && ./run.sh < input.txt > output.txt<CR>
+      augroup END
 
-      autocmd FileType cpp noremap <F8> :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r < input.txt<CR>
-      autocmd FileType cpp noremap <F9> :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r<CR>
-      autocmd FileType cpp noremap <F10> :w <bar> !clear && g++ -D MYDEBUG -std=c++17 -O2 %:t -o %:r && ./%:r < input.txt > output.txt & ; tail -f output.txt<CR>
-
-      let &t_SI = "\e[6 q"  " Modalità inserimento (linea verticale)
-      let &t_EI = "\e[2 q"  " Modalità normale (blocco)
+      let &t_SI = "\e[6 q"
+      let &t_EI = "\e[2 q"
 
       set timeoutlen=1000 ttimeoutlen=0
-
       inoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-
-      '';
+    '';
   };
 }

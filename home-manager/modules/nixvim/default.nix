@@ -10,10 +10,6 @@
       ./plugins.nix
       ./keymaps.nix
     ];
-    extraPackages = with pkgs; [
-        clang
-        clang-tools  # include clangd
-    ];
     globals.mapleader = " ";
 
     lsp.keymaps = [

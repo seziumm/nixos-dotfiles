@@ -30,23 +30,20 @@
 
     web-devicons.enable = true;
 
+    # use g? in nvim-tree to open mappings
     nvim-tree = {
-      enable = true;
+        enable = true;
+        openOnSetup = true;
 
-      settings  = {
-          # autoReloadOnWrite = true;
-          # openOnSetup = true;
-          # renderer.indentMarkers.enable = true; # render | in nvim tree like indent-blankline
-              # view = {
-              #     number = true;
-              #     relativenumber = true;
-              #     side = "left";
-              #     preserveWindowProportions = true;  # o false
-              #
-              # };
-
-
-      };
+        settings  = {
+            auto_reload_on_write = true;
+            renderer.indent_markers.enable = true; # render | in nvim tree like indent-blankline
+                view = {
+                    number = true;
+                    relativenumber = true;
+                    side = "left";
+                };
+        };
     };
 
 # syntax and look
@@ -116,33 +113,42 @@
     cmp_luasnip.enable = true;
 
     lsp = {
-      enable = true;
+        enable = true;
 
-      servers = {
-        clangd.enable = true;
-        cmake.enable = true;
+        servers = {
+            clangd = {
+                enable = true;
 
-        nixd.enable = true;
-        bashls.enable = true;
-        asm_lsp.enable = true;
+                cmd = [
+                    "clangd"
+                        "--background-index"
+                        "--clang-tidy"
+                        "--query-driver=/home/sezium/.nix-profile/bin/c++"
+                ];
+            };
+
+            cmake.enable = true;
+
+            nixd.enable = true;
+            bashls.enable = true;
+            asm_lsp.enable = true;
 
 # web
-        cssls.enable = true;
-        html.enable = true;
-        jsonls.enable = true;
+            cssls.enable = true;
+            html.enable = true;
+            jsonls.enable = true;
+
 # other
+            java_language_server.enable = true;
+            pylsp.enable = true;
+            lua_ls.enable = true;
 
-        java_language_server.enable = true;
-        pylsp.enable = true;
-        lua_ls.enable = true;
-
-        rust_analyzer.enable = true;
-        rust_analyzer.installCargo = true;
-        rust_analyzer.installRustc = true;
-
-
-      };
-
+            rust_analyzer = {
+                enable = true;
+                installCargo = true;
+                installRustc = true;
+            };
+        };
     };
 
     comment.enable = true;

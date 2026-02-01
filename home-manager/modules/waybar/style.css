@@ -108,11 +108,11 @@ tooltip {
   padding: 0px 5px;
   transition: all .3s ease; 
 
-  color:rgba(255,255,255,255);
+  color:rgba(255,255,255,1);
 }
 #custom-expand{
   padding: 0px 5px;
-  color: black;
+  color:rgba(255,255,255,1);
   transition: all .3s ease; 
 }
 #custom-expand:hover{

@@ -3,6 +3,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
+    xwayland.enable = true;
 
     settings = {
 
@@ -26,6 +27,15 @@
         "GBM_BACKEND,nvidia-drm"
         "__GLX_VENDOR_LIBRARY_NAME,nvidia"
         "LIBVA_DRIVER_NAME,nvidia"
+
+
+
+        "GDK_BACKEND,wayland,x11,*" # - GTK: Use Wayland if available; if not, try X11 and then any other GDK backend.
+        "env = QT_QPA_PLATFORM,wayland;xcb" # - Qt: Use Wayland if available, fall back to X11 if not.
+        "env = SDL_VIDEODRIVER,wayland" # - Run SDL2 applications on Wayland. Remove or set to x11 if games that provide older versions of SDL cause compatibility issues
+        "env = CLUTTER_BACKEND,wayland" # - Clutter package already has Wayland enabled, this variable will force Clutter applications to try and use the Wayland backend
+
+
       ];
 
       monitor = ",preferred, auto, 1.0";

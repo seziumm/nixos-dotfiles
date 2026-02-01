@@ -6,7 +6,6 @@
   home.packages = with pkgs; [
 
     telegram-desktop
-    appimage-run
 
 
 # utils
@@ -24,6 +23,7 @@
     # code-cursor-fhs
     code-cursor-fhs
     chromium
+    openjdk21
 
     discord
     obs-studio
