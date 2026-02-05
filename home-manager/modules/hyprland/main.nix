@@ -129,7 +129,7 @@
         touchpad = {
           natural_scroll = false; 
           disable_while_typing = false;
-          scroll_factor = 0.3; # touchpad scroll factor
+          scroll_factor = 0.2; # touchpad scroll speed
 
         };
 
@@ -148,10 +148,11 @@
       ];
 
       gestures = {
+          gesture = "3, horizontal, workspace";
         # workspace_swipe = true;
-        # workspace_swipe_invert = true;
-        # workspace_swipe_forever	= true;
-
+        workspace_swipe_invert = true;
+        workspace_swipe_forever	= true;
+        workspace_swipe_direction_lock = false;
         workspace = true;
       };
 

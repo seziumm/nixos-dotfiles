@@ -14,13 +14,10 @@
     bear
     gnumake
 # needed in nvim
-    lazygit
 
-
+    wiremix # audio controller
 
     # flutter dev
-    # vscodium-fhs
-    # code-cursor-fhs
     code-cursor-fhs
     chromium
     openjdk21
@@ -28,14 +25,12 @@
     discord
     obs-studio
 
-    perf
 
     playerctl # needed tho show lock screen current song and other stuff
     wofi-power-menu
 
     xournalpp
     gnome-calculator
-    pavucontrol
 
     xfce.xfconf # needed to customize thunar
     gvfs # Mount, trash, and other functionalities
@@ -50,7 +45,6 @@
 
     # gtk4
 
-    github-desktop
 
     # browser
     brave
@@ -69,6 +63,8 @@
     btop
     gh
     git
+    lazygit
+    github-desktop
     kitty
     man-pages
     man-pages-posix
@@ -84,6 +80,7 @@
     bluetuith
     killall
     cava
+    perf
 
 
     hyprpaper

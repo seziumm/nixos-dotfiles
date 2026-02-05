@@ -7,5 +7,5 @@
 #
 # -----------------------------------------------------------------------------
 {
-  networking.networkmanager.enable = true;  # Enables NetworkManager for managing network connections (Wi-Fi, Ethernet, VPN)
+    networking.networkmanager.enable = true;  # Enables NetworkManager for managing network connections (Wi-Fi, Ethernet, VPN)
 }
